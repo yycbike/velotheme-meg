@@ -7,7 +7,12 @@ function vt_page_title($title) {
         $event_submission = bfc_event_submission();
         switch ($event_submission->page_to_show()) {
             case 'edit-event':
-                $title = 'Edit Event';
+                if ($event_submission->current_action() == 'edit') {
+                    $title = 'Edit Event';
+                }
+                else {
+                    $title = 'New Event';
+                }
                 break;
                 
             case 'event-updated':
