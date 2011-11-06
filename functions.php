@@ -28,6 +28,10 @@ function vt_page_title($title) {
                 break;
         }
     }
+    else if (trim($title) == 'Monthly Calendar') {
+        list($startdate, $enddate) = bfc_get_cal_dates(array('for' => 'month'));
+        $title = sprintf('%s Bike Fun', date('F Y', $startdate));
+    }
 
     return $title;
 }
