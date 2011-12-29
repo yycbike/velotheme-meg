@@ -7,3 +7,14 @@ Template: twentyeleven
 
 @import url('../twentyeleven/style.css');
 
+
+/********************************************/
+#simplemodal-data {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid;
+}
+
+#simplemodal-overlay {
+    background-color: black;
+}

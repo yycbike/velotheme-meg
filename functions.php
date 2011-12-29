@@ -36,5 +36,22 @@ function vt_page_title($title) {
     return $title;
 }
 
+// 10 = default priority; 2 = pass in 2 arguments
+add_filter('bfc-overview-cal-padding', 'vt_overview_cal_padding_filter', 10, 2);
+function vt_overview_cal_padding_filter($content, $args) {
+    // Arguments:
+    // for = palooza or cal (regular calendar, not palooza)
+    // cols = number of columns (days) that this spans
+    // location = 'before' or 'after' -- is this before the first day with events
+    //            or after the last day.
+    if ($args['for'] === 'palooza' &&
+        $args['location'] === 'before') {
+
+        return '<p>The theme can customize this area to discuss the palooza</p>';
+    }
+    else {
+        return $content;
+    }
+}
 
 ?>
