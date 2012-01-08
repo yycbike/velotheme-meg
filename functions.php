@@ -262,6 +262,7 @@ class Velo_Widget_StayConnected extends WP_Widget {
 	}
 }
 
+/* Register the stay connected widget */
 register_widget('Velo_Widget_StayConnected');
 
 ?>
