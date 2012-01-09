@@ -893,10 +893,50 @@ a:hover {
 }
 
 th.weeks {
+	font-weight: bold;
 	background-color:#555;
 	color: #EEE;
 	padding: 2px 3px;
 	margin-right: 5px;
+}
+
+/* Calendar grid */
+.overview-calendar th {
+	background-color: #6d6c6c;
+        color: white;
+        padding-left: 11px;
+        padding-bottom: 2px;
+        padding-top: 4px;
+        padding-right: 11px;
+
+        /* We have 940px available for the calendar.
+         * The closest we can come is 935px
+         *
+         * (7 * 131px) + (6 * 3px) = 935px
+         */
+        width: 131px;
+        border-right: 3px;
+        border-right-color: white; 
+        border-right-style: solid;
+}
+
+/* No right-side border after the header for Saturday */
+.overview-calendar th:last-child {
+	border-right-style: none;
+}
+
+/* Days of the month */
+.overview-calendar div.date {
+	margin-top: 9px;    
+
+	padding-bottom: 0px;
+        margin-bottom: 4px;
+    
+        border-bottom: 1px;
+        border-bottom-color: #d5d5d5;
+        border-bottom-style: solid;
+
+        font-size: 14px;
 }
 
 /*Event Dialog*/
