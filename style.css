@@ -947,8 +947,11 @@ th.weeks {
 	color: #666;
 }
 #simplemodal-data .title {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold;
+}
+#simplemodal-data .audience {
+	float: right;
 }
 #simplemodal-data .contact-info {
 	display: block;
@@ -966,6 +969,12 @@ th.weeks {
 	display: block;
 	clear: right;
 }
+#simplemodal-data .event-image {
+	clear:both;
+	width:180px;
+	height:150px;
+	overflow:hidden;
+}
 #simplemodal-data .description {
 	clear: both;
 	display: block;
@@ -978,7 +987,8 @@ th.weeks {
     background-color: black;
 }
 #simplemodal-container {
-	height:400px; 
+	height: 500px; 
+	max-height: 600px;
 	width:600px; 
 	color:#111; 
 	background-color:white; 

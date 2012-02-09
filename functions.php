@@ -78,7 +78,7 @@ function twentyeleven_admin_header_style() {
 <?php
 }
 
-add_action('admin_head', 'velo_admin_header_image');
+//add_action('admin_head', 'velo_admin_header_image');
 
 // 10 = default priority; 2 = pass in 2 arguments
 add_filter('bfc-overview-cal-padding', 'vt_overview_cal_padding_filter', 10, 2);
