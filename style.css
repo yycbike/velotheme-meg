@@ -970,15 +970,40 @@ th.weeks {
 	clear: right;
 }
 #simplemodal-data .event-image {
+	display: block;
+	float:left;
 	clear:both;
 	width:180px;
 	height:150px;
 	overflow:hidden;
+	margin: 10px 0;
 }
-#simplemodal-data .description {
-	clear: both;
+#simplemodal-data .event-description {
 	display: block;
+	float: left;
+	width:60%;
+	margin: 10px 10px;
 	padding: 10px 0;
+}
+#simplemodal-data .permalink, #simplemodal-data .admin-edit-link {
+	clear: both;
+	float: left;
+	display: block;
+}
+#simplemodal-data .event-navigation {
+	color: #666;
+	font-size: 12px;
+}
+#simplemodal-data .previous {
+	display: block;
+	clear: left;
+	float: left;
+	width: 30%;
+}
+#simplemodal-data .next {
+	float: right;
+	text-align: right;	
+	width: 30%;
 }
 #simplemodal-data .details {
 	float: right;
