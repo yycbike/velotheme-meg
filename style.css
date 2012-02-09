@@ -948,19 +948,50 @@ th.weeks {
 
 /*Event Dialog*/
 #simplemodal-data {
-    padding: 10px;
+    padding: 0 10px;
     background-color: white;
 }
 #simplemodal-data .time {
 	color: #666;
 }
-#simplemodal-data .title {
+#simplemodal-data .title h2 {
 	font-size: 18px;
 	font-weight: bold;
+	display: inline;
 }
+#simplemodal-data .admin-edit-link {
+	font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding-left: 10px;
+}
+
 #simplemodal-data .audience {
 	float: right;
 }
+#simplemodal-data .audience img {
+	margin-left: 10px;
+}
+
+#simplemodal-data .event-details {
+	border-left: solid 1px #CCC;
+	font-size: 12px;
+	width: 30%;
+	min-height: 160px;
+	float: right;
+	margin: 10px 10px 10px 0;
+	padding: 10px;
+}
+#simplemodal-data h3 {
+	font-weight: bold;
+	font-size: 14px;
+}
+#simplemodal-data .event-about {
+	font-size: 12px;
+	float:left;
+	width: 65%;
+	margin: 10px 0;
+	padding-top: 10px;
+}
+
 #simplemodal-data .contact-info {
 	display: block;
 	width: 48%;
@@ -968,35 +999,32 @@ th.weeks {
 	margin: 5px 10px 5px 0;
 }
 #simplemodal-data .location {
-	display: block;
-	width: 48%;
-	float: right;
-	margin: 5px 0;
+	clear: both;
 }
 #simplemodal-data .location a {
 	display: block;
-	clear: right;
 }
+
 #simplemodal-data .event-image {
 	display: block;
 	float:left;
-	clear:both;
 	width:180px;
 	height:150px;
 	overflow:hidden;
-	margin: 10px 0;
+}
+#simplemodal-data .leader-name {
+	font-size: 14px;
+	margin-bottom: 10px;
 }
 #simplemodal-data .event-description {
 	display: block;
 	float: left;
-	width:60%;
-	margin: 10px 10px;
-	padding: 10px 0;
+	width: 62%;
+	padding-left: 2%;
 }
-#simplemodal-data .permalink, #simplemodal-data .admin-edit-link {
-	clear: both;
-	float: left;
-	display: block;
+#simplemodal-data .permalink {
+	font-size: 14px;
+	margin-top: 20px;
 }
 #simplemodal-data .event-navigation {
 	display: block;
@@ -1032,7 +1060,7 @@ th.weeks {
 #simplemodal-container {
 	height: auto !important; 
 	max-height: 600px;
-	width:600px; 
+	width:800px; 
 	color:#111; 
 	background-color:white; 
 	border:4px solid #444; 
@@ -1055,6 +1083,18 @@ th.weeks {
 	top:-15px; 
 	right:-16px; 
 	cursor:pointer;
+}
+
+/*Sponsors*/
+
+.sponsor-list {
+	text-align:center;
+}
+
+.sponsor {
+	display:inline;
+	list-style:none;
+	padding-right: 50px;
 }
 
 

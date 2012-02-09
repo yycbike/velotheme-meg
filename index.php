@@ -34,7 +34,18 @@ get_header(); ?>
 				echo do_shortcode('[bfc_overview_calendar for=palooza start=2011-06-02 end=2011-06-19]'); 
 			?>
 			</div><!--CALENDAR-->
-			<div id="sponsors"></div>
+			<div id="sponsors">
+			<!-- sponsors should eventually come from the bikefuncal plugin (via shortcode) -->
+				<ul class="sponsor-list">
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+  					<li class="sponsor"><a href="http://vancycle.com/"><img width="80" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/vancycles_small.png" alt="VanCycle"></a></li>
+
+				</ul>
+			</div>
 
 			<?php 
 				//OLD TWENTY ELEVEN CODE
