@@ -30,15 +30,19 @@
 	 */
 	global $page, $paged;
 
-        $title = wp_title( '', false);
-        echo vt_page_title($title);
+	// Display blog name.
+	$blog_name = bloginfo( 'name' );
+	if ( $blog_name ) echo "$blog_name";
 
-	// Add the blog name.
-	//bloginfo( 'name' );
+        $title = wp_title( '', false);
+	if ( $title ) {
+		$title = vt_page_title($title);
+        	echo " | $title";
+	}
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
+	if ( $site_description && is_front_page() )
 		echo " | $site_description";
 
 	// Add a page number if necessary:
