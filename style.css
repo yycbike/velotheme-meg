@@ -951,7 +951,7 @@ th.weeks {
     padding: 0 10px;
     background-color: white;
 }
-#simplemodal-data .time {
+#simplemodal-data, #event-page .time {
 	color: #666;
 }
 #simplemodal-data .title h2 {
@@ -959,15 +959,22 @@ th.weeks {
 	font-weight: bold;
 	display: inline;
 }
+#simplemodal-data, #event-page h3 {
+	font-weight: bold;
+	font-size: 14px;
+}
+#simplemodal-container, #event-page a {
+	color:#009e8f;
+}
 #simplemodal-data .admin-edit-link {
 	font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding-left: 10px;
 }
 
-#simplemodal-data .audience {
+#simplemodal-data, #event-page .audience {
 	float: right;
 }
-#simplemodal-data .audience img {
+#simplemodal-data, #event-page .audience img {
 	margin-left: 10px;
 }
 
@@ -980,9 +987,8 @@ th.weeks {
 	margin: 10px 10px 10px 0;
 	padding: 10px;
 }
-#simplemodal-data h3 {
-	font-weight: bold;
-	font-size: 14px;
+#event-page .event-details {
+	clear: both;
 }
 #simplemodal-data .event-about {
 	font-size: 12px;
@@ -991,7 +997,9 @@ th.weeks {
 	margin: 10px 0;
 	padding-top: 10px;
 }
-
+#event-page .event-about {
+	clear: both;
+}
 #simplemodal-data .contact-info {
 	display: block;
 	width: 48%;
@@ -1000,6 +1008,12 @@ th.weeks {
 }
 #simplemodal-data .location {
 	clear: both;
+}
+#event-page .location, .contact-info {
+	display: inline;
+	width: 45%;
+	margin: 5px 10px 5px 0;
+	float: left;
 }
 #simplemodal-data .location a {
 	display: block;
@@ -1026,7 +1040,7 @@ th.weeks {
 	font-size: 14px;
 	margin-top: 20px;
 }
-#simplemodal-data .event-navigation {
+#simplemodal-data, #event-page .event-navigation {
 	display: block;
 	clear: both;
 	float: left;
@@ -1035,18 +1049,18 @@ th.weeks {
 	padding: 10px 0;
 	border-top: solid 1px #CCC;
 }
-#simplemodal-data .event-navigation p {
+#simplemodal-data, #event-page .event-navigation p {
 	color: #666;
 	font-size: 12px;
 	margin-bottom: 0;
 }
-#simplemodal-data .previous {
+#simplemodal-data, #event-page .previous {
 	display: block;
 	clear: left;
 	float: left;
 	width: 40%;
 }
-#simplemodal-data .next {
+#simplemodal-data, #event-page .next {
 	float: right;
 	text-align: right;	
 	width: 40%;
@@ -1066,9 +1080,6 @@ th.weeks {
 	border:4px solid #444; 
 	padding:12px;
 	z-index: 1000;
-}
-#simplemodal-container a {
-	color:#009e8f;
 }
 #simplemodal-container br {
 	display: none;
@@ -1163,10 +1174,8 @@ th.weeks {
 }
 .entry-content h3,
 .comment-content h3 {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
 }
 .entry-content table,
 .comment-content table {
@@ -3115,4 +3124,3 @@ div#second {
 #ie7 section.recent-posts {
 	margin-right: 7.6%;
 }
-
