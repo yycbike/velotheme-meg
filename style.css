@@ -85,8 +85,8 @@ body {
 	width: 100%;
 }
 #content {
-	margin: 0 34% 0 7.6%;
-	width: 58.4%;
+	margin: 0 20px;
+	width: 65%;
 }
 #secondary {
 	float: right;
@@ -2453,10 +2453,9 @@ a.comment-reply-link > span {
 	border: 1px solid #d3d3d3;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	margin: 0 auto 1.625em;
 	padding: 1.625em;
 	position: relative;
-	width: 68.9%;
+	width: auto%;
 }
 #respond input[type="text"],
 #respond textarea {

@@ -32,9 +32,7 @@ add_action( 'after_setup_theme', 'velo_new_default_header_images' );
 
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
- *
  * Referenced via add_custom_image_header() in twentyeleven_setup().
- *
  * @since Twenty Eleven 1.0
  */
 function twentyeleven_admin_header_style() {
@@ -79,6 +77,29 @@ function twentyeleven_admin_header_style() {
 }
 
 //add_action('admin_head', 'velo_admin_header_image');
+
+add_filter( 'body_class', 'vt_body_class', 20, 2);
+/**
+ * Adds classes to the array of body classes.
+ * The first is if the site has only had one author with published posts.
+ */
+function vt_body_class( $classes ) {
+	if( is_single() || is_page() ) :
+		// List of the classes to remove from the WP generated classes
+		$blacklist = array('singular', 'one-column');
+		// Filter the body classes
+  		foreach( $blacklist as $val ) {
+    			if (!in_array($val, $classes)) : continue;
+    			else:
+     				foreach($classes as $key => $value) {
+      					if ($value == $val) unset($classes[$key]);
+      				}
+    			endif;
+ 		}
+	endif;   // Add the extra classes back untouched
+	$extra_classes = array('two-column', 'right-sidebar');
+	return array_merge($classes, $extra_classes);
+}
 
 // 10 = default priority; 2 = pass in 2 arguments
 add_filter('bfc-overview-cal-padding', 'vt_overview_cal_padding_filter', 10, 2);
