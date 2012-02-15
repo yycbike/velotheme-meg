@@ -1100,12 +1100,19 @@ th.weeks {
 
 .sponsor-list {
 	text-align:center;
+	margin: 20px 0;
 }
 
 .sponsor {
 	display:inline;
 	list-style:none;
 	padding-right: 50px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.sponsor img {
+	vertical-align:middle;
 }
 
 
