@@ -229,7 +229,6 @@ class Velo_Widget_Meta extends WP_Widget {
 			<?php if ( $nav_menu ) wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $nav_menu, 'items_wrap' => '%3$s' ) ); ?>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
-			<li><a href="<?php bloginfo('rss2_url'); ?>" title="<?php echo esc_attr(__('Syndicate this site using RSS 2.0')); ?>"><?php _e('Entries <abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
 			<?php //wp_meta(); ?>
 			</ul>
 <?php
