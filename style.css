@@ -951,7 +951,7 @@ th.weeks {
     padding: 0 10px;
     background-color: white;
 }
-#simplemodal-data, #event-page .time {
+#simplemodal-data .time, #event-page .time {
 	color: #666;
 }
 #simplemodal-data .title h2 {
@@ -959,11 +959,11 @@ th.weeks {
 	font-weight: bold;
 	display: inline;
 }
-#simplemodal-data, #event-page h3 {
+#simplemodal-data h3, #event-page h3 {
 	font-weight: bold;
 	font-size: 14px;
 }
-#simplemodal-container, #event-page a {
+#simplemodal-container a, #event-page a {
 	color:#009e8f;
 }
 #simplemodal-data .admin-edit-link {
@@ -971,10 +971,10 @@ th.weeks {
 	padding-left: 10px;
 }
 
-#simplemodal-data, #event-page .audience {
+#simplemodal-data .audience, #event-page .audience {
 	float: right;
 }
-#simplemodal-data, #event-page .audience img {
+#simplemodal-data .audience img, #event-page .audience img {
 	margin-left: 10px;
 }
 
@@ -1040,7 +1040,7 @@ th.weeks {
 	font-size: 14px;
 	margin-top: 20px;
 }
-#simplemodal-data, #event-page .event-navigation {
+#simplemodal-data .event-navigation, #event-page .event-navigation {
 	display: block;
 	clear: both;
 	float: left;
@@ -1049,18 +1049,18 @@ th.weeks {
 	padding: 10px 0;
 	border-top: solid 1px #CCC;
 }
-#simplemodal-data, #event-page .event-navigation p {
+#simplemodal-data .event-navigation p, #event-page .event-navigation p {
 	color: #666;
 	font-size: 12px;
 	margin-bottom: 0;
 }
-#simplemodal-data, #event-page .previous {
+#simplemodal-data .previous, #event-page .previous {
 	display: block;
 	clear: left;
 	float: left;
 	width: 40%;
 }
-#simplemodal-data, #event-page .next {
+#simplemodal-data .next, #event-page .next {
 	float: right;
 	text-align: right;	
 	width: 40%;

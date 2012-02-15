@@ -78,6 +78,51 @@ function twentyeleven_admin_header_style() {
 
 //add_action('admin_head', 'velo_admin_header_image');
 
+/**
+ * Register more sidebars widgetized areas.
+ */
+function vt_widgets_init() {
+
+	register_sidebar( array(
+		'name' => __( 'Event Page Sidebar', 'velotheme' ),
+		'description' => __( 'Sidebar for Event pages', 'velotheme' ),
+		'id' => 'event-sidebar',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'About Page Sidebar', 'velotheme' ),
+		'id' => 'about-sidebar',
+		'description' => __( 'Sidebar for the About page', 'velotheme' ),
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Volunteer Page Sidebar', 'velotheme' ),
+		'id' => 'volunteer-sidebar',
+		'description' => __( 'Sidebar for the Volunteer page', 'velotheme' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Supporters Page Sidebar', 'velotheme' ),
+		'id' => 'supporters-sidebar',
+		'description' => __( 'Sidebar for the Supporters Page', 'velotheme' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'vt_widgets_init' );
+
+
 add_filter( 'body_class', 'vt_body_class', 20, 2);
 /**
  * Adds classes to the array of body classes.
