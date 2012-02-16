@@ -103,7 +103,11 @@
 						// Houston, we have a new header image!
 						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 					else: */ ?>
-					<img class="raised-dropshadow" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+					<?php if(is_front_page()): ?>
+						<img class="raised-dropshadow" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+					<?php else: ?>
+						<img class="raised-dropshadow" src="http://beta.velo.mezzohost.com/wp-content/uploads/2012/02/Velopalooza-2012-poster-logo.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" alt="" />
+					<?php endif; ?>
 				<?php /*endif*/; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
