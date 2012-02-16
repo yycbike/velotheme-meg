@@ -3131,3 +3131,30 @@ div#second {
 #ie7 section.recent-posts {
 	margin-right: 7.6%;
 }
+
+/* Event Submission Form
+----------------------------------------------- */
+/* Container for the whole form */
+.new-event-form {
+    width: 100%;
+}
+
+/* Labels for the individual controls on the left side */
+.new-event-form h4 {
+    width: 15%;
+
+    float: left;
+}
+
+/* Controls, instructions, etc. that go with a label */
+.new-event-form .new-event-controls {
+    width: 85%;
+    float: right;
+}
+
+/* Actions at the bottom of the form */
+.new-event-form .new-event-actions {
+    clear: both;
+    border-top: 1px solid;
+    padding-top: 5px;
+}
