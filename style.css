@@ -556,7 +556,7 @@ a:hover {
 }
 
 #branding img {
-	background:#444;
+	background: transparent;
 	/*-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;*/	
@@ -597,7 +597,7 @@ a:hover {
 	float: left;
 	margin: 20px 0px 6px -20px;
 	z-index: 1;
-	width: 4%;
+	width: 31%;
 	height: 60px;
 	position: absolute;
     	content: " ";
@@ -614,10 +614,10 @@ a:hover {
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	clear: none;
 	display: inline;
-	margin: 20px -20px 6px 0px;
+	margin: 20px -20px 6px -20px;
 	padding: 5px 0;
 	z-index: 1;
-	width: 69.4%;
+	width: 71.5%;
 	height: 50px;
 	position: absolute;
 	text-align: center;
