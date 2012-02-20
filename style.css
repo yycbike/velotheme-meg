@@ -91,6 +91,7 @@ body {
 #secondary {
 	float: right;
 	margin-right: 7.6%;
+	padding-top: 60px;
 	width: 18.8%;
 }
 
@@ -716,7 +717,8 @@ a:hover {
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-	color: #009e8f;
+	/*color: #009e8f;*/
+	color: #eee;
 }
 
 /* Slider */
@@ -2155,11 +2157,12 @@ section.recent-posts .other-recent-posts li:after {
 	clear: both;
 	margin: 0 0;
 }
-.widget-title {
+#secondary .widget-title {
 	margin-right: 0.8em;
-	color: #fff;
 	font-size: 16px;
+	font-weight: bold;
 	clear:both;
+	padding: 10px 0;
 }
 
 .widget ul {
@@ -2181,12 +2184,16 @@ section.recent-posts .other-recent-posts li:after {
 }
 .widget a {
 	text-decoration: none;
-	color: #EEE;
 }
 .widget a:hover,
 .widget a:focus,
 .widget a:active {
 	text-decoration: underline;
+}
+
+/* Other Events Widget */
+.other-events .event-title {
+	padding: 0 5px 8px 0;
 }
 
 /* Search Widget */
@@ -2305,11 +2312,8 @@ section.ephemera .entry-title a span {
 
 #comments-title {
 	color: #666;
-	font-size: 10px;
-	font-weight: 500;
 	line-height: 2.6em;
-	padding: 0 0 2.6em;
-	text-transform: uppercase;
+	padding: 0 0 2em;
 }
 .nopassword,
 .nocomments {
@@ -2391,9 +2395,9 @@ section.ephemera .entry-title a span {
 	top: 0;
 }
 .commentlist > li:before {
-	content: url(images/comment-arrow.png);
+	/*content: url(images/comment-arrow.png);
 	left: -21px;
-	position: absolute;
+	position: absolute;*/
 }
 .commentlist > li.pingback:before {
 	content: '';
@@ -2626,6 +2630,14 @@ p.comment-form-comment {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 0px 5px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 0px 5px;
 	box-shadow: rgba(0, 0, 0, 0.3) 1px 0px 5px;
+}
+
+#colophon .widget a {
+	color: #EEE;
+}
+#colophon .widget-title {
+	color: #FFF;
+	font-weight: normal;
 }
 #supplementary {
 	border-bottom: 1px solid #333;
