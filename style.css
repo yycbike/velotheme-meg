@@ -981,10 +981,29 @@ th.weeks {
 #simplemodal-container a, #event-page a {
 	color:#009e8f;
 }
-#simplemodal-data .admin-edit-link {
-	font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	padding-left: 10px;
+
+#simplemodal-container .edit-link a,
+#event-page .edit-link a {
+     background: #eee;
+     -moz-border-radius: 3px;
+     border-radius: 3px;
+     color: #666;
+     font-size: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;     
+     line-height: 1.5em;
+     font-weight: 300;
+     text-decoration: none;
+     padding: 0 8px;
+     margin-left: 10px;
 }
+#event-page .edit-link {
+     float:right;
+}
+#simplemodal-container .edit-link a:hover,
+#event-page .edit-link a:hover {
+     background: #888;
+     color: #fff;
+}
+
 
 #simplemodal-data .audience, #event-page .audience {
 	float: right;
