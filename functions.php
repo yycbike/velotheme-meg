@@ -348,15 +348,25 @@ class Velo_Widget_StayConnected extends WP_Widget {
 			<ul>
             <li>Sign up for the email newsletter:</li>
             <li>
-            	<form id="newsletter" name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post">
-        			<input type="hidden" name="llr" value="xltcqeeab">
-        			<input type="hidden" name="m" value="1103957675383">
-        			<input type="hidden" name="p" value="oi">
-        			<input type="text" name="ea" id="email" value="" value placeholder="you@yours.com" >
-        			<input type="submit" name="go" value="Subscribe" class="submit">
-        		</form>
+            	<!--form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" action="http://velopalooza.us4.list-manage1.com/subscribe/post?u=cfa9fc9bbc64a1f7af476b6b1&amp;id=a26ce0d6b6" class="validate" target="_blank" method="post">
+        			<div class="mc-field-group">
+					<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="" placeholder="you@yours.com" >
+				</div>
+				<div id="mce-responses">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+        			<input type="submit" name="subscribe" value="Subscribe" class="submit">
+        	</form-->
+
+		
+		<form action="http://velopalooza.us4.list-manage.com/subscribe/post?u=cfa9fc9bbc64a1f7af476b6b1&amp;id=a26ce0d6b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+				<input type="email" name="EMAIL" class="email" id="mce-EMAIL" value="" placeholder="you@yours.com" required>                                
+        			<input type="submit" name="subscribe" value="Subscribe" id="mc-embedded-subscribe" class="button">
+		</form>
+
             </li>
-            <li> Or join us on <a href="http://www.facebook.com/velopalooza">Facebook</a>
+            <li class="clear"> Or join us on <a href="http://www.facebook.com/velopalooza">Facebook</a>
             </ul>
 <?php
 
