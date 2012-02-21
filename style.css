@@ -995,8 +995,11 @@ th.weeks {
      padding: 0 8px;
      margin-left: 10px;
 }
+#event-page .edit-link a {
+     margin-left: 0;
+}
 #event-page .edit-link {
-     float:right;
+     margin-top: 10px;
 }
 #simplemodal-container .edit-link a:hover,
 #event-page .edit-link a:hover {
