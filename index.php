@@ -28,7 +28,8 @@ get_header(); ?>
 				</div>
 			</div>
 			<div id="main-calendar">
-			<form><input type="submit" name="go" value="Add Event" class="submit"></form>
+			<form id="add-event-form"><input type="submit" name="go" value="Add Event" class="submit"></form>
+			<?php get_search_form(); ?>
 			<?php 
 				//display current calendar
 				echo do_shortcode('[bfc_overview_calendar for=palooza start=2011-06-02 end=2011-06-19]'); 

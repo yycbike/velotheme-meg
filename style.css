@@ -845,6 +845,15 @@ a:hover {
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);	
 }
 
+#add-event-form {
+	width: auto;
+	float: left;
+}
+
+#main-calendar #searchform {
+	float: right;
+}
+
 #calendar-header {
 	position: relative;
 	width: 100%;
@@ -902,6 +911,10 @@ th.weeks {
 }
 
 /* Calendar grid */
+.overview-calendar {
+	clear: both;
+}
+
 .overview-calendar th {
 	background-color: #6d6c6c;
         color: white;
