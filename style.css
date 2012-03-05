@@ -820,7 +820,10 @@ a:hover {
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
 }
 
-#main-calendar input[type="submit"] {
+/* #main-calendar input[type="button"] { */
+#main-calendar .add-event-button {
+        display: inline-block;
+
 	margin-bottom: 10px;
 	padding: 5px 25px;
 	color: white;
