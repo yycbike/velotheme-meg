@@ -3141,14 +3141,14 @@ div#second {
 
 /* Labels for the individual controls on the left side */
 .new-event-form h4 {
-    width: 15%;
+    width: 20%;
 
     float: left;
 }
 
 /* Controls, instructions, etc. that go with a label */
 .new-event-form .new-event-controls {
-    width: 85%;
+    width: 80%;
     float: right;
 }
 
