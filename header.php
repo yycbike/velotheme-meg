@@ -36,7 +36,7 @@
 
         $title = wp_title( '', false);
 	if ( $title ) {
-		$title = vt_page_title($title);
+		$title = bfc_page_title($title);
         	echo " | $title";
 	}
 
