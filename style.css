@@ -957,34 +957,35 @@ th.weeks {
     padding: 0 10px;
     background-color: white;
 }
-#simplemodal-data .time, #event-page .time {
+
+.event-info .time {
 	color: #666;
 }
-#simplemodal-data .title h2 {
+.event-info .title h2 {
 	font-size: 18px;
 	font-weight: bold;
 	display: inline;
 }
-#simplemodal-data h3, #event-page h3 {
+.event-info h3 {
 	font-weight: bold;
 	font-size: 14px;
 }
-#simplemodal-container a, #event-page a {
+.event-info a {
 	color:#009e8f;
 }
-#simplemodal-data .admin-edit-link {
+.event-info .admin-edit-link {
 	font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding-left: 10px;
 }
 
-#simplemodal-data .audience, #event-page .audience {
+.event-info .audience {
 	float: right;
 }
-#simplemodal-data .audience img, #event-page .audience img {
+.event-info .audience img {
 	margin-left: 10px;
 }
 
-#simplemodal-data .event-details {
+.event-info .event-details {
 	border-left: solid 1px #CCC;
 	font-size: 12px;
 	width: 30%;
@@ -993,60 +994,62 @@ th.weeks {
 	margin: 10px 10px 10px 0;
 	padding: 10px;
 }
-#event-page .event-details {
+/*#event-page .event-details {
 	clear: both;
-}
-#simplemodal-data .event-about {
+}*/
+.event-info .event-about {
 	font-size: 12px;
 	float:left;
 	width: 65%;
 	margin: 10px 0;
 	padding-top: 10px;
 }
-#event-page .event-about {
+/*#event-page .event-about {
 	clear: both;
-}
-#simplemodal-data .contact-info {
+}*/
+.event-info .contact-info {
 	display: block;
 	width: 48%;
 	float: left;
 	margin: 5px 10px 5px 0;
 }
-#simplemodal-data .location {
+.event-info .location {
 	clear: both;
 }
-#event-page .location, .contact-info {
+/*#event-page .location, .contact-info {
 	display: inline;
 	width: 45%;
 	margin: 5px 10px 5px 0;
 	float: left;
-}
-#simplemodal-data .location a {
+}*/
+
+.event-info .location a {
 	display: block;
 }
 
-#simplemodal-data .event-image {
+.event-info .event-image {
 	display: block;
 	float:left;
 	width:180px;
 	height:150px;
 	overflow:hidden;
 }
-#simplemodal-data .leader-name {
+
+.event-info .leader-name {
 	font-size: 14px;
 	margin-bottom: 10px;
 }
-#simplemodal-data .event-description {
+.event-info .event-description {
 	display: block;
 	float: left;
 	width: 62%;
 	padding-left: 2%;
 }
-#simplemodal-data .permalink {
+.event-info .permalink {
 	font-size: 14px;
 	margin-top: 20px;
 }
-#simplemodal-data .event-navigation, #event-page .event-navigation {
+.event-info .event-navigation {
 	display: block;
 	clear: both;
 	float: left;
@@ -1055,25 +1058,28 @@ th.weeks {
 	padding: 10px 0;
 	border-top: solid 1px #CCC;
 }
-#simplemodal-data .event-navigation p, #event-page .event-navigation p {
+.event-info .event-navigation p {
 	color: #666;
 	font-size: 12px;
 	margin-bottom: 0;
 }
-#simplemodal-data .previous, #event-page .previous {
+.event-info .previous {
 	display: block;
 	clear: left;
 	float: left;
 	width: 40%;
 }
-#simplemodal-data .next, #event-page .next {
+.event-info .next {
 	float: right;
 	text-align: right;	
 	width: 40%;
 }
-#simplemodal-data .details {
+.event-info .details {
 	float: right;
 }
+
+
+/* Style the pop-up window that events can appear in */
 #simplemodal-overlay {
     background-color: black;
 }
