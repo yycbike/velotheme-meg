@@ -24,7 +24,7 @@ get_header(); ?>
 				</div>
 				<div class="calendar-switch">
 				<h3>Can't wait for bike fun?</h3>
-				<a href="#current-cal">See events happening now.</a>
+				<a href="current-calendar">See events happening now.</a>
 				</div>
 			</div>
 			<div id="main-calendar">

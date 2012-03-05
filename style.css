@@ -820,7 +820,6 @@ a:hover {
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
 }
 
-/* #main-calendar input[type="button"] { */
 #main-calendar .add-event-button {
         display: inline-block;
 
@@ -846,6 +845,7 @@ a:hover {
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);	
 }
 
+/* Heading above the calendar on the landing page */
 #calendar-header {
 	position: relative;
 	width: 100%;
@@ -894,6 +894,7 @@ a:hover {
 	font-weight: strong;
 }
 
+/* @@@ It's unclear what this refers to */
 th.weeks {
 	font-weight: bold;
 	background-color:#555;
@@ -903,7 +904,7 @@ th.weeks {
 }
 
 /* Calendar grid */
-.overview-calendar th {
+.overview-calendar th.weekday-name {
 	background-color: #6d6c6c;
         color: white;
         padding-left: 11px;
@@ -920,6 +921,8 @@ th.weeks {
         border-right: 3px;
         border-right-color: white; 
         border-right-style: solid;
+
+        text-transform: none;
 }
 
 /* No right-side border after the header for Saturday */
@@ -1118,7 +1121,22 @@ th.weeks {
 	vertical-align:middle;
 }
 
+/* Navigation in current/monthly calendars */
+.cal-links .previous {
+    text-align: left;
+    float: left;
+}
 
+.cal-links .current {
+    text-align: center;
+}
+
+.cal-links .next {
+    text-align: left;
+    float: right;
+}
+
+/* ---- Is this (here on out) default twentyeleven stuff? */
 .hentry,
 .no-results {
 	border-bottom: 1px solid #ddd;
