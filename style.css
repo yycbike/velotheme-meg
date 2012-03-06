@@ -1774,41 +1774,71 @@ section.recent-posts .other-recent-posts li:after {
 .widget-area {
   font-size: 12px; }
 
-.widget {
-  clear: both;
-  margin: 0 0; }
+/* Some widgets appear on light backgrounds, others on dark
+ * backgrounds. Vary the colors, depending on the context
+ */
+body {
+  /* By default, widgets are on a dark background */ }
+  body .widget-title {
+    margin-right: 0.8em;
+    color: white;
+    font-size: 16px;
+    clear: both; }
+  body .widget {
+    clear: both;
+    margin: 0 0; }
+    body .widget ul {
+      display: inline;
+      font-size: 15px;
+      margin: 0;
+      padding-bottom: 20px;
+      list-style: none; }
+      body .widget ul ul {
+        margin-left: 1.5em; }
+      body .widget ul li {
+        float: left;
+        margin-right: 0.9em;
+        padding: 5px 0;
+        color: #AAA;
+        font-size: 13px; }
+    body .widget a {
+      text-decoration: none;
+      color: #eeeeee; }
+      body .widget a:hover, body .widget a:focus, body .widget a:active {
+        text-decoration: underline; }
 
-.widget-title {
-  margin-right: 0.8em;
-  color: #fff;
-  font-size: 16px;
-  clear: both; }
-
-.widget ul {
-  display: inline;
-  font-size: 15px;
-  margin: 0;
-  padding-bottom: 20px;
-  list-style: none; }
-
-.widget ul ul {
-  margin-left: 1.5em; }
-
-.widget ul li {
-  float: left;
-  margin-right: 0.9em;
-  padding: 5px 0;
-  color: #AAA;
-  font-size: 13px; }
-
-.widget a {
-  text-decoration: none;
-  color: #EEE; }
-
-.widget a:hover,
-.widget a:focus,
-.widget a:active {
-  text-decoration: underline; }
+#secondary {
+  /* #secondary indicates a sidebar, which gets widgets on a light
+   * background. Confusingly, there's also #second which contains
+   * dark-background widgets in the footer.
+   */ }
+  #secondary .widget-title {
+    margin-right: 0.8em;
+    color: black;
+    font-size: 16px;
+    clear: both; }
+  #secondary .widget {
+    clear: both;
+    margin: 0 0; }
+    #secondary .widget ul {
+      display: inline;
+      font-size: 15px;
+      margin: 0;
+      padding-bottom: 20px;
+      list-style: none; }
+      #secondary .widget ul ul {
+        margin-left: 1.5em; }
+      #secondary .widget ul li {
+        float: left;
+        margin-right: 0.9em;
+        padding: 5px 0;
+        color: #AAA;
+        font-size: 13px; }
+    #secondary .widget a {
+      text-decoration: none;
+      color: #222222; }
+      #secondary .widget a:hover, #secondary .widget a:focus, #secondary .widget a:active {
+        text-decoration: underline; }
 
 /* Search Widget */
 .widget_search form {
