@@ -109,6 +109,19 @@
 .event-info .time {
 	color: #666;
 }
+
+/* On the event page, the title is an H1 element. Override
+ * WordPress' default stylings to align things properly.
+ */
+#event-page .title h1.entry-title {
+    /* Align nicely with audience icons */
+    clear: none;
+    padding-top: 0;
+    
+    /* Bring it closer to the date listing below */
+    margin-bottom: 0;
+}
+
 .event-info .title h2 {
 	font-size: 18px;
 	font-weight: bold;

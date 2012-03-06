@@ -14,7 +14,18 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'single' ); ?>
+					<?php
+                        if (get_post_type($post->ID) == 'bfc-event') {
+                            $type = 'single-bfc-event';
+                        }
+                        else {
+                            $type = 'single';
+                        }
+                        
+
+                        get_template_part( 'content', $type );
+
+                    ?>
 
 					<?php comments_template( '', true ); ?>
 
