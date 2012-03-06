@@ -127,6 +127,27 @@
 	font-weight: bold;
 	display: inline;
 }
+
+.event-info {
+    $cancel-text-color: red;
+
+    span.cancel, div.cancel {
+        /* When canceled, most things have a strikethrough */
+        text-decoration: line-through;
+
+        /* Except newsflashes */
+        &.newsflash {
+            text-decoration: none;
+            color: $cancel-text-color;
+        }
+    }
+
+    /* The word "CANCELED" that appears before canceled events */
+    .title-cancel {
+        color: $cancel-text-color;
+    }
+}
+
 .event-info h3 {
 	font-weight: bold;
 	font-size: 14px;
@@ -199,7 +220,6 @@
 .event-info .details {
 	float: right;
 }
-
 
 /*Event Dialog*/
 #simplemodal-data {

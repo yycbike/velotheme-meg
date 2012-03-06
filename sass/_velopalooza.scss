@@ -143,6 +143,14 @@ th.weeks {
     }
 }
 
+/* Canceled events in the overview calendar */
+.event-overview.canceled .event-title {
+    /* Don't color the event red, b/c that would
+     * be visually distracting.
+     */
+    text-decoration: line-through;
+}
+
 /*Sponsors*/
 
 .sponsor-list {
