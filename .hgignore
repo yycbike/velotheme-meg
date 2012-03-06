@@ -11,5 +11,8 @@ syntax: glob
 # Ignore Mac volumes
 .DS_Store
 
+# Ignore SASS cache
+.sass-cache/
+
 syntax: regexp
 /RCS/

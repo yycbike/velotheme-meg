@@ -1,0 +1,225 @@
+/* Event listings are similar, but not identical, based on how they're used. 
+ * Set up a mixin to handle the differences.
+ */
+@mixin event-info($width, $for) {
+    $details-margin-right:  10px;
+    $details-margin-left:   0px; 
+    $details-padding-right: 10px;
+    $details-padding-left:  0px; 
+    $details-width: ($width * 0.3) - 
+        $details-margin-left - $details-margin-right -
+        $details-padding-left - $details-padding-right;
+
+    $about-margin-right:  15px; 
+    $about-margin-left:   0px; 
+    $about-padding-right: 10px;
+    $about-padding-left:  0px; 
+    $about-border-right:  1px; 
+    $about-width:   ($width * 0.7) -
+        $about-margin-right - $about-margin-left -
+        $about-border-right -
+        $about-padding-right - $about-padding-left;
+    
+    /* Declare variables so they stay in scope after the @if block. */
+    $img-max-width: 0px;
+    $img-max-height: 0px;
+    $description-padding-left: 0px;
+    $description-width: 0px;
+    @if $for == 'listing' {
+        $img-max-width: 180px;
+        $img-max-height: 200px;
+
+        $description-padding-left: 5px;
+        $description-width: $about-width - $img-max-width - $description-padding-left;
+    }
+    @if $for != 'listing' {
+        $img-max-width: $about-width;
+        $img-max-height: none;
+
+        $description-padding-left: 0px;
+        $description-width: auto;
+    }
+
+    /* meeting location & contact info */
+    .event-details {
+        font-size: 12px;
+        width: $details-width;
+        min-height: 160px;
+        float: right;
+        margin: 10px $details-margin-right 10px $details-margin-left;
+        padding: 10px $details-padding-right 10px $details-padding-left;
+
+        /* Be sure it clears below the icon for audience */
+        clear: both;
+    }
+    .contact-info {
+        display: block;
+        float: left;
+        margin: 5px 10px 5px 0;
+
+        width: 115px; /* @@@ why is this set? Inspector says the text overflows this, anyways... */
+    }
+
+    .event-about {
+        font-size: 12px;
+        float:left;
+        width: $about-width;
+        margin: 10px $about-margin-right 10px $about-margin-left;
+        padding-top: 10px;
+        padding-right: $about-padding-right;
+
+        border-right: solid $about-border-right #CCC;
+    }
+
+    .event-image {
+        display: block;
+        overflow: hidden;
+
+        @if $for == 'listing' {
+            float: left;
+        }
+        @if $for != 'listing' {
+            float: right; 
+        }
+
+        img {
+            max-width:  $img-max-width;
+            max-height: $img-max-height;
+        }
+    }
+
+    .event-description {
+        display: block;
+        float: left;
+        width: $description-width;
+        padding-left: $description-padding-left;
+    }
+}
+
+#listing {
+    @include event-info(780px, 'listing');
+}
+
+#event-page {
+    @include event-info(650px, 'event-page');
+}
+
+/* @@@ todo: Add an event-info partial for the preview */
+
+.event-info .time {
+	color: #666;
+}
+.event-info .title h2 {
+	font-size: 18px;
+	font-weight: bold;
+	display: inline;
+}
+.event-info h3 {
+	font-weight: bold;
+	font-size: 14px;
+}
+.event-info a {
+	color:#009e8f;
+}
+.event-info .admin-edit-link {
+	font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	padding-left: 10px;
+}
+
+/* Includes audience & the fee warning */
+.event-info .audience {
+	float: right;
+    clear: both;
+}
+.event-info .audience img {
+	margin-left: 10px;
+}
+
+#event-page .event-about {
+    /* Make the text describing the event be bigger, when showing the event page */
+    /* @@@ todo: Make it bigger for preview, too */
+    font-size: 14px;
+}
+
+.event-info .location {
+	clear: both;
+}
+
+.event-info .location a {
+	display: block;
+}
+
+.event-info .leader-name {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.event-info .permalink {
+	font-size: 14px;
+	margin-top: 20px;
+}
+.event-info .event-navigation {
+	display: block;
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px 0;
+	border-top: solid 1px #CCC;
+}
+.event-info .event-navigation p {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+.event-info .previous {
+	display: block;
+	clear: left;
+	float: left;
+	width: 40%;
+}
+.event-info .next {
+	float: right;
+	text-align: right;	
+	width: 40%;
+}
+.event-info .details {
+	float: right;
+}
+
+
+/*Event Dialog*/
+#simplemodal-data {
+    padding: 0 10px;
+    background-color: white;
+}
+
+/* Style the pop-up window that events can appear in */
+#simplemodal-overlay {
+    background-color: black;
+}
+#simplemodal-container {
+	height: auto !important; 
+	max-height: 600px;
+	width:800px; 
+	color:#111; 
+	background-color:white; 
+	border:4px solid #444; 
+	padding:12px;
+	z-index: 1000;
+}
+#simplemodal-container br {
+	display: none;
+}
+#simplemodal-container a.modalCloseImg {
+	background: url(images/x.png) no-repeat; 
+	width:25px; 
+	height:29px; 
+	display:inline; 
+	z-index:3200; 
+	position:absolute; 
+	top:-15px; 
+	right:-16px; 
+	cursor:pointer;
+}
+

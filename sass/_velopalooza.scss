@@ -1,0 +1,178 @@
+/* Main Calendar */
+
+#main-calendar {
+	clear: both;
+	position: relative;
+	padding: 10px 10px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
+}
+
+#main-calendar .add-event-button {
+        display: inline-block;
+
+	margin-bottom: 10px;
+	padding: 5px 25px;
+	color: white;
+	font-weight: bold; 
+	border: none; 
+	background: rgb(0,211,190); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,211,190,1) 0%, rgba(0,158,143,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,211,190,1)), color-stop(100%,rgba(0,158,143,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,211,190,1) 0%,rgba(0,158,143,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,211,190,1) 0%,rgba(0,158,143,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,211,190,1) 0%,rgba(0,158,143,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(0,211,190,1) 0%,rgba(0,158,143,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d3be', endColorstr='#009e8f',GradientType=0 ); /* IE6-9 */
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);	
+}
+
+/* Heading above the calendar on the landing page */
+#calendar-header {
+	position: relative;
+	width: 100%;
+	border-top: 1px dotted rgba(0,0,0,0.3);
+}
+
+#calendar-header h1 {
+	color: #222;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1em;
+	padding: 10px 0;
+}
+
+#calendar-header h3 {
+	color: #373737;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#calendar-header h4 {
+	color: #222222;
+	font-size: 18px;
+}
+
+#calendar-header .calendar-title {
+	width: 50%;
+	float: left;	
+	padding: 20px;
+	margin-top: 9px;
+	margin-bottom: 10px;
+} 
+
+#calendar-header .calendar-switch {
+	float: right;	
+	width: 384px;
+	height: 80px;
+	background: url(images/calendar-switch.png) no-repeat;
+	padding: 20px;
+	margin-top: 9px;
+	margin-bottom: 10px;
+}
+
+#calendar-header .calendar-switch a {
+	color: #009e8f;
+	font-weight: strong;
+}
+
+/* @@@ It's unclear what this refers to */
+th.weeks {
+	font-weight: bold;
+	background-color:#555;
+	color: #EEE;
+	padding: 2px 3px;
+	margin-right: 5px;
+}
+
+/* Calendar grid */
+.overview-calendar th.weekday-name {
+	background-color: #6d6c6c;
+        color: white;
+        padding-left: 11px;
+        padding-bottom: 2px;
+        padding-top: 4px;
+        padding-right: 11px;
+
+        /* We have 940px available for the calendar.
+         * The closest we can come is 935px
+         *
+         * (7 * 131px) + (6 * 3px) = 935px
+         */
+        width: 131px;
+        border-right: 3px;
+        border-right-color: white; 
+        border-right-style: solid;
+
+        text-transform: none;
+}
+
+/* No right-side border after the header for Saturday */
+.overview-calendar th:last-child {
+	border-right-style: none;
+}
+
+/* Days of the month */
+.overview-calendar div.date {
+	margin-top: 9px;    
+
+	padding-bottom: 0px;
+        margin-bottom: 4px;
+    
+        border-bottom: 1px;
+        border-bottom-color: #d5d5d5;
+        border-bottom-style: solid;
+
+        font-size: 14px;
+}
+
+/*Events in Calendar*/
+.overview-calendar .event-title {
+	padding: 0 5px 8px 0;
+}
+.overview-calendar .event-title a{
+	color: #000;
+}
+
+/*Sponsors*/
+
+.sponsor-list {
+	text-align:center;
+	margin: 20px 0;
+}
+
+.sponsor {
+	display:inline;
+	list-style:none;
+	padding-right: 50px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.sponsor img {
+	vertical-align:middle;
+}
+
+/* Navigation in current/monthly calendars */
+.cal-links .previous {
+    text-align: left;
+    float: left;
+}
+
+.cal-links .current {
+    text-align: center;
+}
+
+.cal-links .next {
+    text-align: left;
+    float: right;
+}
