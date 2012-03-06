@@ -2845,12 +2845,11 @@ th.weeks {
   border-bottom-style: solid;
   font-size: 14px; }
 
-/*Events in Calendar*/
-.overview-calendar .event-title {
+/* Event listings in overview calendar, sidebar, etc */
+.event-title {
   padding: 0 5px 8px 0; }
-
-.overview-calendar .event-title a {
-  color: #000; }
+  .event-title a {
+    color: #000; }
 
 /*Sponsors*/
 .sponsor-list {

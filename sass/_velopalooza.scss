@@ -135,12 +135,12 @@ th.weeks {
         font-size: 14px;
 }
 
-/*Events in Calendar*/
-.overview-calendar .event-title {
-	padding: 0 5px 8px 0;
-}
-.overview-calendar .event-title a{
-	color: #000;
+/* Event listings in overview calendar, sidebar, etc */
+.event-title {
+    padding: 0 5px 8px 0;
+    a {
+        color: #000;
+    }
 }
 
 /*Sponsors*/
