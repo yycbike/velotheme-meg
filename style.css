@@ -2986,16 +2986,19 @@ th.weeks {
   display: inline; }
 
 .event-info {
+  /* newsflashes for non-canceled events */
   /* The word "CANCELED" that appears before canceled events */ }
+  .event-info div.newsflash {
+    color: #660000; }
   .event-info span.cancel, .event-info div.cancel {
     /* When canceled, most things have a strikethrough */
     text-decoration: line-through;
     /* Except newsflashes */ }
     .event-info span.cancel.newsflash, .event-info div.cancel.newsflash {
       text-decoration: none;
-      color: red; }
+      color: #cb3d3a; }
   .event-info .title-cancel {
-    color: red; }
+    color: #cb3d3a; }
 
 .event-info h3 {
   font-weight: bold;

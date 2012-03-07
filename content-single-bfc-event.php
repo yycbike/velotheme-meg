@@ -10,7 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<!-- <h1 class="entry-title">BFC event: <?php the_title(); ?></h1> -->
+                <!-- No title for BFC event pages; the plugin does that for us -->
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

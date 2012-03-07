@@ -129,7 +129,13 @@
 }
 
 .event-info {
-    $cancel-text-color: red;
+    $cancel-text-color: rgb(203, 61, 58);
+    /* newsflashes for non-canceled events */
+    $newsflash-text-color:   rgb(102, 0, 0);
+
+    div.newsflash {
+        color: $newsflash-text-color;
+    }
 
     span.cancel, div.cancel {
         /* When canceled, most things have a strikethrough */
