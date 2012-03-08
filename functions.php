@@ -129,6 +129,17 @@ add_filter( 'body_class', 'vt_body_class', 20, 2);
  * The first is if the site has only had one author with published posts.
  */
 function vt_body_class( $classes ) {
+    // We're using the no-sidebar layout, so keep the classes the
+    // way they are (i.e., for a full-width layout).
+    if (is_page_template('page-no-sidebar.php')) {
+        return $classes;
+    }
+
+    // Change from a one-column layout to a two-column layout.
+    // This depends on having the theme's options set to a one-column
+    // layout by default. (It's a bit weird: we set the default to a
+    // one-column layout, then nearly always override that to add a
+    // sidebar in.)
 	if( is_single() || is_page() ) :
 		// List of the classes to remove from the WP generated classes
 		$blacklist = array('singular', 'one-column');
