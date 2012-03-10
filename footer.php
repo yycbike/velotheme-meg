@@ -28,11 +28,6 @@
 				<li>Velolove © 2012</li>
 				<li>Powered by <a href='http://wordpress.org/'>WordPress</a> and <a href='http://www.mezzohost.com/'>Mezzo Host</a></li>
 				</ul>
-				
-
-<!-- OLD TWENTY ELEVEN FOOTER
-<a href="<?php /*echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); */?></a>
-<!--SOFTACULOUS-->
 
 			</div>
 	</footer><!-- #colophon -->
