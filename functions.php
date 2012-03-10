@@ -165,14 +165,10 @@ function vt_overview_cal_padding_filter($content, $args) {
     // cols = number of columns (days) that this spans
     // location = 'before' or 'after' -- is this before the first day with events
     //            or after the last day.
-    if ($args['for'] === 'palooza' &&
-        $args['location'] === 'before') {
+    // startdate, enddate = days as Unix timestamp
 
-        return '<p>The theme can customize this area to discuss the palooza</p>';
-    }
-    else {
-        return $content;
-    }
+    // The filter doesn't do anything now, but it could...
+    return $content;
 }
 
 /**
