@@ -31,7 +31,7 @@ get_header(); ?>
                         <a href='add-event' class='add-event-button'>Add Event</a>
 			<?php 
 				//display current calendar
-				echo do_shortcode('[bfc_overview_calendar for=palooza start=2011-06-02 end=2011-06-19]'); 
+				echo do_shortcode('[bfc_overview_calendar for=palooza]'); 
 			?>
 			</div><!--CALENDAR-->
 			<div id="sponsors">
