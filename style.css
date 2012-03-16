@@ -2093,6 +2093,10 @@ a.comment-reply-link > span {
 
 /* Comment Form */
 #respond {
+  	/* without clear:both, the respond div floats up over 
+       * content on Mobile Safari. Issue #42 in velotheme-meg.
+       */
+  clear: both;
   background: #ddd;
   border: 1px solid #d3d3d3;
   -moz-border-radius: 3px;

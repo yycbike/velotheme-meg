@@ -196,7 +196,7 @@ class Velo_Widget_Meta extends WP_Widget {
 			//echo $before_title . $title . $after_title;
 ?>
 			<ul>
-			<?php if ( $nav_menu ) wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $nav_menu, 'items_wrap' => '%3$s' ) ); ?>
+			<?php if ( $nav_menu ) wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $nav_menu, 'items_wrap' => '%3$s', 'container' => false ) ); ?>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
 			<?php //wp_meta(); ?>
@@ -272,7 +272,7 @@ class Velo_Widget_StayConnected extends WP_Widget {
         			<input type="hidden" name="llr" value="xltcqeeab">
         			<input type="hidden" name="m" value="1103957675383">
         			<input type="hidden" name="p" value="oi">
-        			<input type="text" name="ea" id="email" value="" value placeholder="you@yours.com" >
+        			<input type="text" name="ea" id="newsletter-email" value="" placeholder="you@yours.com" >
         			<input type="submit" name="go" value="Subscribe" class="submit">
         		</form>
             </li>
