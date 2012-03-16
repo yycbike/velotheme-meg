@@ -2901,6 +2901,58 @@ th.weeks {
   text-align: left;
   float: right; }
 
+/* Front page post */
+#front-page-post {
+  border: 1px solid #ddd;
+  display: block;
+  height: 300px;
+  margin: 0;
+  width: 6349x;
+  position: absolute;
+  top: 100px;
+  left: 341px;
+  float: right;
+  overflow: hidden;
+  background: #f7f7f7;
+  /* The "Velopalooza is" text */
+  /* The 3 attributes about Velopalooza */ }
+  #front-page-post .image-banner {
+    margin: 0px;
+    padding: 5px;
+    list-style: none; }
+    #front-page-post .image-banner li {
+      display: inline; }
+    #front-page-post .image-banner img {
+      background: none;
+      border: 1px solid #ddd;
+      margin: 0px;
+      padding: 0px;
+      width: 150px;
+      height: 150px;
+      margin-right: 4px; }
+    #front-page-post .image-banner img.last {
+      padding-right: 0px; }
+  #front-page-post p {
+    font-family: "arvo", sans-serif;
+    font-size: 16px;
+    clear: both;
+    margin-bottom: 8px;
+    text-align: center; }
+  #front-page-post li {
+    font-family: "arvo", sans-serif;
+    font-size: 24px;
+    list-style: none; }
+    #front-page-post li.awesome {
+      margin-left: 35px;
+      display: inline; }
+    #front-page-post li.fun {
+      margin-left: 35px;
+      display: inline; }
+    #front-page-post li.anyone {
+      text-align: center; }
+  #front-page-post a {
+    color: #009e8f; }
+
 /* Event listings are similar, but not identical, based on how they're used. 
  * Set up a mixin to handle the differences.
  */

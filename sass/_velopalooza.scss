@@ -1,3 +1,6 @@
+// For links we want to emphasize
+$emphasis-link-color: #009e8f;
+
 /* Main Calendar */
 
 #main-calendar {
@@ -81,7 +84,7 @@
 }
 
 #calendar-header .calendar-switch a {
-	color: #009e8f;
+	color: $emphasis-link-color;
 	font-weight: strong;
 }
 
@@ -213,4 +216,83 @@ th.weeks {
 .cal-links .next {
     text-align: left;
     float: right;
+}
+
+/* Front page post */
+#front-page-post {
+    border: 1px solid #ddd;
+    display: block;
+    height: 300px;
+    margin: 0;
+    width: 6349x;
+    position: absolute;
+    top: 100px;
+    left: 341px;
+    float: right;
+    overflow: hidden;
+
+    background: hsl(0, 0%, 97%);
+
+    .image-banner {
+        margin: 0px;
+        padding: 5px;
+
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+
+        img {
+            background: none;
+            border: 1px solid #ddd;
+            margin: 0px;
+            padding: 0px;
+
+            width: 150px;
+            height: 150px;
+
+            margin-right: 4px;
+        }
+
+        img.last {
+            padding-right: 0px;
+        }
+    }
+
+    /* The "Velopalooza is" text */
+    p {
+        font-family: "arvo", sans-serif;
+        font-size: 16px;
+        clear: both;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    /* The 3 attributes about Velopalooza */
+    li {
+        font-family: "arvo", sans-serif;
+        font-size: 24px;
+        list-style: none;
+
+        // Hand-set the margins to visually centre the text
+        // 'inline' so the first 2 items show on the same line
+        &.awesome {
+            margin-left: 35px;
+            display: inline;
+        }
+
+        &.fun {
+            margin-left: 35px;
+            display: inline;
+        }
+
+        &.anyone {
+            text-align: center;
+        }
+    }
+
+    a {
+        color: $emphasis-link-color;
+    }
 }
