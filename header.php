@@ -112,7 +112,6 @@
 			</a>
 			<?php endif; // end check for removed header image ?>
 
-
 			<nav id="access" role="navigation">
 
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
@@ -124,12 +123,20 @@
 			</nav><!-- #access -->
 
 			<?php  ?>
-			
+
 			<?php if(is_front_page())
 				{
-					include ('feature-slide.php');
+                    print '<div id=billboard class=featured-posts>';
+                    // This was the featured post slideshow. Instead, we just put the body of one post on the
+                    // front page.
+					// include ('feature-slide.php');
+
+                    the_post();
+                    the_content();
+                    print '</div>';
 				}
 			?>
+
 
 	</header><!-- #branding -->
 

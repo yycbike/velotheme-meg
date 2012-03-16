@@ -95,7 +95,10 @@ th.weeks {
 }
 
 /* Calendar grid */
-.overview-calendar th.weekday-name {
+.overview-calendar {
+
+    $th-gap: 3px;
+    th.weekday-name {
 	background-color: #6d6c6c;
         color: white;
         padding-left: 11px;
@@ -109,30 +112,57 @@ th.weeks {
          * (7 * 131px) + (6 * 3px) = 935px
          */
         width: 131px;
-        border-right: 3px;
+        border-right: $th-gap;
         border-right-color: white; 
         border-right-style: solid;
 
         text-transform: none;
-}
+    }
 
-/* No right-side border after the header for Saturday */
-.overview-calendar th:last-child {
-	border-right-style: none;
-}
+    /* No right-side border after the header for Saturday */
+    th:last-child {
+        border-right-style: none;
+    }
 
-/* Days of the month */
-.overview-calendar div.date {
-	margin-top: 9px;    
+    td {
+        /* help align the calendar entries with the padding text. */
+        vertical-align: top;
+    }
 
-	padding-bottom: 0px;
-        margin-bottom: 4px;
-    
-        border-bottom: 1px;
+    /* Days of the month */
+    $date-margin-top: 9px;
+    $date-margin-bottom: 4px;
+    $date-border-bottom: 1px;
+    $date-font-size: 14px;
+    div.date {
+        margin-top: $date-margin-top;    
+
+        padding-bottom: 0px;
+        margin-bottom: $date-margin-bottom;
+
+        border-bottom: $date-border-bottom;
         border-bottom-color: #d5d5d5;
         border-bottom-style: solid;
 
-        font-size: 14px;
+        font-size: $date-font-size;
+    }
+
+    /* Padding text in the calendar */
+    .overview-calendar-padding {
+        font-size: 18px;
+
+        padding: 5px;
+        margin-right: $th-gap;
+
+        /* Align the box with the bottom of the date divs.
+         * Need a mystery 2px of padding.
+         */
+        margin-top: $date-margin-top + $date-margin-bottom +
+            $date-border-bottom + $date-font-size +
+            2px;
+
+        background-color: hsl(0, 0%, 93%);
+    }
 }
 
 /* Event listings in overview calendar, sidebar, etc */
