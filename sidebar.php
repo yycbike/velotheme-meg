@@ -16,12 +16,14 @@ if(get_post_type($wp_query->post->ID)=='bfc-event') {
 
 if($sidebar_type != '') :
 
-?>        
+?>
+<ul id="sidebar">    
         <div id="secondary" class="widget-area" role="complementary">
         	
 			<?php if ( ! dynamic_sidebar( $sidebar_type ) ) :?>
                 
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
+</ul>
 
 <?php endif; ?>

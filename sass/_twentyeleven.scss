@@ -1782,9 +1782,14 @@ section.recent-posts .other-recent-posts li:after {
  * backgrounds. Vary the colors, depending on the context
  */
 @mixin widget($title-color, $a-color) {
+
+}
+
+/* Footer widgets */
+body {
     .widget-title {
         margin-right: 0.8em;
-        color: $title-color;
+        color: #000;
         font-size: 16px;
         clear:both;
     }
@@ -1810,12 +1815,13 @@ section.recent-posts .other-recent-posts li:after {
                 padding: 5px 0;
                 color: #AAA;
                 font-size: 13px;
+                list-style: none;
             }
         }
 
         a {
             text-decoration: none;
-            color: $a-color;
+            color: #222;
 
             &:hover, &:focus, &:active {
                 text-decoration: underline;
@@ -1824,19 +1830,41 @@ section.recent-posts .other-recent-posts li:after {
     }
 }
 
-body {
-     /* By default, widgets are on a dark background */
-     @include widget($title-color: #fff, $a-color: #eee);
+/* Sidebar widgets */
+#sidebar {
+    h2.widgettitle {
+	font-size: 14px;
+	font-weight: bold;
+    }
+
+
+    li {
+        list-style: none;
+
+        li {
+            float: none;	
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #222;
+
+        &:hover, &:focus, &:active {
+            text-decoration: underline;
+        }
+    }
+
+    .widget {
+        clear: none;
+    }
+
+    .textwidget {
+        padding-top: 10px;
+    }
 }
 
-#secondary {
-     /* #secondary indicates a sidebar, which gets widgets on a light
-      * background. Confusingly, there's also #second which contains
-      * dark-background widgets in the footer.
-      */
 
-     @include widget($title-color: #000, $a-color: #222);
-}
 
 /* Search Widget */
 .widget_search form {
