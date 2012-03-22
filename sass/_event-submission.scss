@@ -1,0 +1,112 @@
+// Code for the add event form
+
+@mixin event-submission-h2 {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+h2.event-submission-preview {
+    @include event-submission-h2;
+    margin-bottom: 5px;
+}
+
+/* Container for the whole form */
+.new-event-form {
+    $width: 650px;
+    $label-area-width:   $width * 0.2;
+    $control-area-width: $width * 0.8;
+
+    $control-full-width:     $control-area-width * 0.9;
+    $control-narrower-width: $control-area-width * 0.6;
+
+    width: $width;
+
+    /* Section labels are bigger than normal */
+    h2.event-submission-section {
+        @include event-submission-h2;
+    }
+
+    /* Labels for the individual controls on the left side */
+    h3.event-submission-label {
+        width: $label-area-width;
+        float: left;
+    }
+
+    /* Controls, instructions, etc. that go with a label */
+    .new-event-controls {
+        width: $control-area-width;
+        float: right;
+
+        margin-bottom: 15px;
+    }
+
+    input.fullwidth {
+        width: $control-full-width;
+    }
+
+    input.narrower {
+        width: $control-narrower-width;
+    }
+
+    /* textarea for entering event description */
+    #event_descr {
+        width: $control-full-width;
+        height: 15em;
+    }
+
+    input[type='text'], input[type='email'], input[type='url'] {
+        /* override a setting in the theme's stylesheet */
+        margin-bottom: 0px;
+    }
+
+    /* Actions at the bottom of the form */
+    .new-event-actions {
+        clear: both;
+        //border-top: 1px solid hsl(0, 0%, 75%);
+        //margin-top: 5px;
+        //padding-top: 5px;
+        //margin-bottom: 10px;
+
+        /* Line up w/ the width of the "narrower" controls above it.
+         * But because they're a little wider than their declared width,
+         * due to chrome, add a fudge factor.
+         */
+        //width: $label-area-width + $control-narrower-width + 8px;
+
+        margin-top: 15px;
+        padding: 5px;
+        background-color: hsl(0, 0%, 50%);
+
+        input[type='submit'] {
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
+
+    /* help text */
+    .help {
+        font-style: italic;
+    }
+
+    #hideemail_controls {
+        margin-top: 5px;
+    }
+
+    #datelist-container {
+        max-height: 300px;
+        padding-right: 20px;
+        overflow-y: auto;
+
+        border: 1px solid;
+    }
+
+    .dates-table-tip td {
+        border-top: none;
+    }
+}
+
+
+
+
+
+

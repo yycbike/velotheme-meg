@@ -94,6 +94,10 @@
         width: $description-width;
         padding-left: $description-padding-left;
     }
+
+    .end-of-event {
+        clear: both;
+    }
 }
 
 #listing {
@@ -104,7 +108,18 @@
     @include event-info(650px, 'event-page');
 }
 
-/* @@@ todo: Add an event-info partial for the preview */
+#preview {
+    $starting-width: 650px;
+    $border-width: 1px;
+    $padding: 3px;
+    $content-width: $starting-width - (2 * $border-width) - (2 * $padding);
+
+    border: $border-width hsl(0, 0%, 75%) solid;
+    padding: $padding;
+
+    /* Preview looks like the event page, not the pop-up listing. */
+    @include event-info($content-width, 'event-page');
+}
 
 .event-info .time {
 	color: #666;

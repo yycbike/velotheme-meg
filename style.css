@@ -2981,6 +2981,8 @@ th.weeks {
     float: left;
     width: 335px;
     padding-left: 5px; }
+  #listing .end-of-event {
+    clear: both; }
 
 #event-page {
   /* Declare variables so they stay in scope after the @if block. */
@@ -3020,8 +3022,53 @@ th.weeks {
     float: left;
     width: auto;
     padding-left: 0px; }
+  #event-page .end-of-event {
+    clear: both; }
 
-/* @@@ todo: Add an event-info partial for the preview */
+#preview {
+  border: 1px #bfbfbf solid;
+  padding: 3px;
+  /* Preview looks like the event page, not the pop-up listing. */
+  /* Declare variables so they stay in scope after the @if block. */
+  /* meeting location & contact info */ }
+  #preview .event-details {
+    font-size: 12px;
+    width: 172.6px;
+    min-height: 160px;
+    float: right;
+    margin: 10px 10px 10px 0px;
+    padding: 10px 10px 10px 0px;
+    /* Be sure it clears below the icon for audience */
+    clear: both; }
+  #preview .contact-info {
+    display: block;
+    float: left;
+    margin: 5px 10px 5px 0;
+    width: 115px;
+    /* @@@ why is this set? Inspector says the text overflows this, anyways... */ }
+  #preview .event-about {
+    font-size: 12px;
+    float: left;
+    width: 423.4px;
+    margin: 10px 15px 10px 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-right: solid 1px #cccccc; }
+  #preview .event-image {
+    display: block;
+    overflow: hidden;
+    float: right; }
+    #preview .event-image img {
+      max-width: 423.4px;
+      max-height: none; }
+  #preview .event-description {
+    display: block;
+    float: left;
+    width: auto;
+    padding-left: 0px; }
+  #preview .end-of-event {
+    clear: both; }
+
 .event-info .time {
   color: #666; }
 
@@ -3153,3 +3200,61 @@ th.weeks {
   top: -15px;
   right: -16px;
   cursor: pointer; }
+
+h2.event-submission-preview {
+  margin-top: 10px;
+  font-size: 17px;
+  margin-bottom: 5px; }
+
+/* Container for the whole form */
+.new-event-form {
+  width: 650px;
+  /* Section labels are bigger than normal */
+  /* Labels for the individual controls on the left side */
+  /* Controls, instructions, etc. that go with a label */
+  /* textarea for entering event description */
+  /* Actions at the bottom of the form */
+  /* help text */ }
+  .new-event-form h2.event-submission-section {
+    margin-top: 10px;
+    font-size: 17px; }
+  .new-event-form h3.event-submission-label {
+    width: 130px;
+    float: left; }
+  .new-event-form .new-event-controls {
+    width: 520px;
+    float: right;
+    margin-bottom: 15px; }
+  .new-event-form input.fullwidth {
+    width: 468px; }
+  .new-event-form input.narrower {
+    width: 312px; }
+  .new-event-form #event_descr {
+    width: 468px;
+    height: 15em; }
+  .new-event-form input[type='text'], .new-event-form input[type='email'], .new-event-form input[type='url'] {
+    /* override a setting in the theme's stylesheet */
+    margin-bottom: 0px; }
+  .new-event-form .new-event-actions {
+    clear: both;
+    /* Line up w/ the width of the "narrower" controls above it.
+     * But because they're a little wider than their declared width,
+     * due to chrome, add a fudge factor.
+     */
+    margin-top: 15px;
+    padding: 5px;
+    background-color: gray; }
+    .new-event-form .new-event-actions input[type='submit'] {
+      font-size: 17px;
+      font-weight: bold; }
+  .new-event-form .help {
+    font-style: italic; }
+  .new-event-form #hideemail_controls {
+    margin-top: 5px; }
+  .new-event-form #datelist-container {
+    max-height: 300px;
+    padding-right: 20px;
+    overflow-y: auto;
+    border: 1px solid; }
+  .new-event-form .dates-table-tip td {
+    border-top: none; }
