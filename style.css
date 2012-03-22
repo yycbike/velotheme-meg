@@ -3205,7 +3205,7 @@ th.weeks {
 
 h2.event-submission-preview {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 20px;
   margin-bottom: 5px; }
 
 /* Container for the whole form */
@@ -3220,14 +3220,20 @@ h2.event-submission-preview {
   /* Indent the radio button */ }
   .new-event-form h2.event-submission-section {
     margin-top: 10px;
-    font-size: 17px; }
-  .new-event-form h3.event-submission-label {
+    font-size: 20px; }
+  .new-event-form .event-submission-label {
     width: 130px;
-    float: left; }
+    clear: both;
+    float: left;
+    margin-bottom: 20px; }
   .new-event-form .new-event-controls {
     width: 520px;
     float: right;
-    margin-bottom: 15px; }
+    margin-bottom: 20px; }
+  .new-event-form h3.event-submission-label {
+    font-size: 16px; }
+  .new-event-form div.event-submission-label h3 {
+    font-size: 16px; }
   .new-event-form input.fullwidth {
     width: 468px; }
   .new-event-form input.narrower {
@@ -3240,10 +3246,6 @@ h2.event-submission-preview {
     margin-bottom: 0px; }
   .new-event-form .new-event-actions {
     clear: both;
-    /* Line up w/ the width of the "narrower" controls above it.
-     * But because they're a little wider than their declared width,
-     * due to chrome, add a fudge factor.
-     */
     margin-top: 15px;
     padding: 5px;
     background-color: gray; }
@@ -3254,14 +3256,23 @@ h2.event-submission-preview {
     color: grey; }
   .new-event-form .help {
     font-style: italic; }
+    .new-event-form .help.hideemail {
+      margin-left: 20px; }
   .new-event-form #hideemail_controls {
     margin-top: 5px; }
   .new-event-form #datelist-container {
+    width: 478px;
     max-height: 300px;
-    padding-right: 20px;
     overflow-y: auto;
-    border: 1px solid; }
+    border: 1px solid #d9d9d9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px; }
   .new-event-form .dates-table-tip td {
     border-top: none; }
   .new-event-form #event-during-festival {
     margin-left: 20px; }
+  .new-event-form .optional {
+    color: gray;
+    font-size: 12px; }

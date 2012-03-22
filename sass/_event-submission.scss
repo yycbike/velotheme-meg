@@ -2,7 +2,7 @@
 
 @mixin event-submission-h2 {
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 h2.event-submission-preview {
@@ -26,10 +26,15 @@ h2.event-submission-preview {
         @include event-submission-h2;
     }
 
+    $margin-below-controls: 20px;
+
     /* Labels for the individual controls on the left side */
-    h3.event-submission-label {
+    .event-submission-label {
         width: $label-area-width;
+        clear: both;
         float: left;
+
+        margin-bottom: $margin-below-controls;
     }
 
     /* Controls, instructions, etc. that go with a label */
@@ -37,7 +42,14 @@ h2.event-submission-preview {
         width: $control-area-width;
         float: right;
 
-        margin-bottom: 15px;
+        margin-bottom: $margin-below-controls;
+    }
+
+    h3.event-submission-label {
+        font-size: 16px;
+    }
+    div.event-submission-label h3 {
+        font-size: 16px;
     }
 
     input.fullwidth {
@@ -62,16 +74,6 @@ h2.event-submission-preview {
     /* Actions at the bottom of the form */
     .new-event-actions {
         clear: both;
-        //border-top: 1px solid hsl(0, 0%, 75%);
-        //margin-top: 5px;
-        //padding-top: 5px;
-        //margin-bottom: 10px;
-
-        /* Line up w/ the width of the "narrower" controls above it.
-         * But because they're a little wider than their declared width,
-         * due to chrome, add a fudge factor.
-         */
-        //width: $label-area-width + $control-narrower-width + 8px;
 
         margin-top: 15px;
         padding: 5px;
@@ -90,6 +92,10 @@ h2.event-submission-preview {
     /* help text */
     .help {
         font-style: italic;
+
+        &.hideemail {
+            margin-left: 20px;
+        }
     }
 
     #hideemail_controls {
@@ -97,11 +103,20 @@ h2.event-submission-preview {
     }
 
     #datelist-container {
+        $border-width: 1px;
+        $side-padding-width: 20px;
+
+        width: $control-area-width - (2 * $border-width) - (2 * $side-padding-width);
+
         max-height: 300px;
-        padding-right: 20px;
         overflow-y: auto;
 
-        border: 1px solid;
+        border: $border-width solid hsl(0, 0%, 85%);
+
+        padding-top:    5px;
+        padding-bottom: 5px;
+        padding-right:  $side-padding-width;
+        padding-left:   $side-padding-width;
     }
 
     .dates-table-tip td {
@@ -111,6 +126,11 @@ h2.event-submission-preview {
     /* Indent the radio button */
     #event-during-festival {
         margin-left: 20px;
+    }
+
+    .optional {
+        color: gray;
+        font-size: 12px;
     }
 }
 
