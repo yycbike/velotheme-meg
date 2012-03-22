@@ -3214,7 +3214,8 @@ h2.event-submission-preview {
   /* Controls, instructions, etc. that go with a label */
   /* textarea for entering event description */
   /* Actions at the bottom of the form */
-  /* help text */ }
+  /* help text */
+  /* Indent the radio button */ }
   .new-event-form h2.event-submission-section {
     margin-top: 10px;
     font-size: 17px; }
@@ -3247,6 +3248,8 @@ h2.event-submission-preview {
     .new-event-form .new-event-actions input[type='submit'] {
       font-size: 17px;
       font-weight: bold; }
+  .new-event-form label.disabled {
+    color: gray; }
   .new-event-form .help {
     font-style: italic; }
   .new-event-form #hideemail_controls {
@@ -3258,3 +3261,5 @@ h2.event-submission-preview {
     border: 1px solid; }
   .new-event-form .dates-table-tip td {
     border-top: none; }
+  .new-event-form #event-during-festival {
+    margin-left: 20px; }

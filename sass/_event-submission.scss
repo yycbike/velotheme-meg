@@ -83,6 +83,10 @@ h2.event-submission-preview {
         }
     }
 
+    label.disabled {
+        color: grey;
+    }
+
     /* help text */
     .help {
         font-style: italic;
@@ -102,6 +106,11 @@ h2.event-submission-preview {
 
     .dates-table-tip td {
         border-top: none;
+    }
+
+    /* Indent the radio button */
+    #event-during-festival {
+        margin-left: 20px;
     }
 }
 
