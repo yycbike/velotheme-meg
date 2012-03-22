@@ -90,7 +90,7 @@ h2.event-submission-preview {
     }
 
     /* help text */
-    .help {
+    .help, tr.dates-table-tip {
         font-style: italic;
 
         &.hideemail {

@@ -3254,9 +3254,9 @@ h2.event-submission-preview {
       font-weight: bold; }
   .new-event-form label.disabled {
     color: grey; }
-  .new-event-form .help {
+  .new-event-form .help, .new-event-form tr.dates-table-tip {
     font-style: italic; }
-    .new-event-form .help.hideemail {
+    .new-event-form .help.hideemail, .new-event-form tr.dates-table-tip.hideemail {
       margin-left: 20px; }
   .new-event-form #hideemail_controls {
     margin-top: 5px; }
