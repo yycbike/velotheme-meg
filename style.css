@@ -477,7 +477,7 @@ input#searchsubmit {
 
 /* Links */
 a {
-  color: #555;
+  color: #28776f;
   text-decoration: none; }
 
 a:focus,
@@ -840,7 +840,8 @@ a:hover {
 .comment-content h2 {
   color: #000;
   font-weight: bold;
-  margin: 0 0 .8125em; }
+  margin: 0 0 .6em;
+  font-size: 16px; }
 
 .entry-content h3,
 .comment-content h3 {
@@ -1784,7 +1785,7 @@ section.recent-posts .other-recent-posts li:after {
 /* Footer widgets */
 body .widget-title {
   margin-right: 0.8em;
-  color: #000;
+  color: #fff;
   font-size: 16px;
   clear: both; }
 body .widget {
@@ -1807,7 +1808,7 @@ body .widget {
       list-style: none; }
   body .widget a {
     text-decoration: none;
-    color: #222; }
+    color: #d9d9d9; }
     body .widget a:hover, body .widget a:focus, body .widget a:active {
       text-decoration: underline; }
 
