@@ -1813,9 +1813,8 @@ body .widget {
       text-decoration: underline; }
 
 /* Sidebar widgets */
-#sidebar h2.widgettitle {
-  font-size: 14px;
-  font-weight: bold; }
+#sidebar .widget-title {
+  color: black; }
 #sidebar li {
   list-style: none; }
   #sidebar li li {
@@ -2956,27 +2955,27 @@ th.weeks {
   /* meeting location & contact info */ }
   #listing .event-details {
     font-size: 12px;
-    width: 214px;
+    width: 215px;
     min-height: 160px;
     float: right;
-    margin: 10px 10px 10px 0px;
-    padding: 10px 10px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 8px;
     /* Be sure it clears below the icon for audience */
-    clear: both; }
+    clear: both;
+    border-left: solid 1px #cccccc; }
   #listing .contact-info {
     display: block;
-    float: left;
     margin: 5px 10px 5px 0;
     width: 115px;
     /* @@@ why is this set? Inspector says the text overflows this, anyways... */ }
   #listing .event-about {
     font-size: 12px;
     float: left;
-    width: 520px;
-    margin: 10px 15px 10px 0px;
+    width: 527px;
+    margin: 10px 0px 10px 10px;
     padding-top: 10px;
-    padding-right: 10px;
-    border-right: solid 1px #cccccc; }
+    padding-right: 8px;
+    border-right: solid 1px transparent; }
   #listing .event-image {
     display: block;
     overflow: hidden;
@@ -2987,43 +2986,50 @@ th.weeks {
   #listing .event-description {
     display: block;
     float: left;
-    width: 335px;
+    width: 342px;
     padding-left: 5px; }
   #listing .end-of-event {
     clear: both; }
+  #listing .social-media {
+    /* Use whitespace to visually separate from the info 
+     * the ride leader entered.
+     */
+    margin-top: 20px; }
+    #listing .social-media a {
+      margin-right: 10px; }
 
 #event-page {
   /* Declare variables so they stay in scope after the @if block. */
   /* meeting location & contact info */ }
   #event-page .event-details {
     font-size: 12px;
-    width: 175px;
+    width: 176px;
     min-height: 160px;
     float: right;
-    margin: 10px 10px 10px 0px;
-    padding: 10px 10px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 8px;
     /* Be sure it clears below the icon for audience */
-    clear: both; }
+    clear: both;
+    border-left: solid 1px transparent; }
   #event-page .contact-info {
     display: block;
-    float: left;
     margin: 5px 10px 5px 0;
     width: 115px;
     /* @@@ why is this set? Inspector says the text overflows this, anyways... */ }
   #event-page .event-about {
     font-size: 12px;
     float: left;
-    width: 429.0px;
-    margin: 10px 15px 10px 0px;
+    width: 436.0px;
+    margin: 10px 0px 10px 10px;
     padding-top: 10px;
-    padding-right: 10px;
+    padding-right: 8px;
     border-right: solid 1px #cccccc; }
   #event-page .event-image {
     display: block;
     overflow: hidden;
     float: right; }
     #event-page .event-image img {
-      max-width: 429.0px;
+      max-width: 436.0px;
       max-height: none; }
   #event-page .event-description {
     display: block;
@@ -3032,6 +3038,13 @@ th.weeks {
     padding-left: 0px; }
   #event-page .end-of-event {
     clear: both; }
+  #event-page .social-media {
+    /* Use whitespace to visually separate from the info 
+     * the ride leader entered.
+     */
+    margin-top: 20px; }
+    #event-page .social-media a {
+      margin-right: 10px; }
 
 #preview {
   border: 1px #bfbfbf solid;
@@ -3041,33 +3054,33 @@ th.weeks {
   /* meeting location & contact info */ }
   #preview .event-details {
     font-size: 12px;
-    width: 172.6px;
+    width: 173.6px;
     min-height: 160px;
     float: right;
-    margin: 10px 10px 10px 0px;
-    padding: 10px 10px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 8px;
     /* Be sure it clears below the icon for audience */
-    clear: both; }
+    clear: both;
+    border-left: solid 1px transparent; }
   #preview .contact-info {
     display: block;
-    float: left;
     margin: 5px 10px 5px 0;
     width: 115px;
     /* @@@ why is this set? Inspector says the text overflows this, anyways... */ }
   #preview .event-about {
     font-size: 12px;
     float: left;
-    width: 423.4px;
-    margin: 10px 15px 10px 0px;
+    width: 430.4px;
+    margin: 10px 0px 10px 10px;
     padding-top: 10px;
-    padding-right: 10px;
+    padding-right: 8px;
     border-right: solid 1px #cccccc; }
   #preview .event-image {
     display: block;
     overflow: hidden;
     float: right; }
     #preview .event-image img {
-      max-width: 423.4px;
+      max-width: 430.4px;
       max-height: none; }
   #preview .event-description {
     display: block;
@@ -3076,6 +3089,13 @@ th.weeks {
     padding-left: 0px; }
   #preview .end-of-event {
     clear: both; }
+  #preview .social-media {
+    /* Use whitespace to visually separate from the info 
+     * the ride leader entered.
+     */
+    margin-top: 20px; }
+    #preview .social-media a {
+      margin-right: 10px; }
 
 .event-info .time {
   color: #666; }

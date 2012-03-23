@@ -1835,11 +1835,9 @@ body {
 
 /* Sidebar widgets */
 #sidebar {
-    h2.widgettitle {
-	font-size: 14px;
-	font-weight: bold;
+    .widget-title {
+        color: black;
     }
-
 
     li {
         list-style: none;

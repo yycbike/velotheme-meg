@@ -2,19 +2,30 @@
  * Set up a mixin to handle the differences.
  */
 @mixin event-info($width, $for) {
-    $details-margin-right:  10px;
+    // Calculate the widths of the about column and the details column.
+    //
+    // We want to draw a border in between the two columns, but we run
+    // into the css faux columns problem, where the heights of the divs don't
+    // fill the container. In the listing, the details tend to be taller;
+    // in the event page, the about text tends to be taller. So we
+    // conditionally draw one border or the other, depending on what kind
+    // of page it is. (This is a huge hack, and the effect doesn't totally work.)
+
     $details-margin-left:   0px; 
+    $details-margin-right:  0px;
+    $details-border-left:   1px;
+    $details-padding-left:  8px; 
     $details-padding-right: 10px;
-    $details-padding-left:  0px; 
     $details-width: ($width * 0.3) - 
         $details-margin-left - $details-margin-right -
+        $details-border-left -
         $details-padding-left - $details-padding-right;
 
-    $about-margin-right:  15px; 
-    $about-margin-left:   0px; 
-    $about-padding-right: 10px;
+    $about-margin-left:   10px; 
+    $about-margin-right:  $details-margin-left; 
+    $about-border-right:  $details-border-left; 
+    $about-padding-right: $details-padding-left;
     $about-padding-left:  0px; 
-    $about-border-right:  1px; 
     $about-width:   ($width * 0.7) -
         $about-margin-right - $about-margin-left -
         $about-border-right -
@@ -25,12 +36,17 @@
     $img-max-height: 0px;
     $description-padding-left: 0px;
     $description-width: 0px;
+    $about-border-color: transparent;
+    $details-border-color: transparent;
     @if $for == 'listing' {
         $img-max-width: 180px;
         $img-max-height: 200px;
 
         $description-padding-left: 5px;
         $description-width: $about-width - $img-max-width - $description-padding-left;
+
+        // In the pop-up, the details tend to be taller, so use it for the border
+        $details-border-color: #ccc;
     }
     @if $for != 'listing' {
         $img-max-width: $about-width;
@@ -38,6 +54,9 @@
 
         $description-padding-left: 0px;
         $description-width: auto;
+
+        // In event pages, the about text tends to be taller; use it for the border
+        $about-border-color: #ccc;
     }
 
     /* meeting location & contact info */
@@ -51,10 +70,11 @@
 
         /* Be sure it clears below the icon for audience */
         clear: both;
+
+        border-left: solid $details-border-left $details-border-color;
     }
     .contact-info {
         display: block;
-        float: left;
         margin: 5px 10px 5px 0;
 
         width: 115px; /* @@@ why is this set? Inspector says the text overflows this, anyways... */
@@ -68,7 +88,7 @@
         padding-top: 10px;
         padding-right: $about-padding-right;
 
-        border-right: solid $about-border-right #CCC;
+        border-right: solid $about-border-right $about-border-color;
     }
 
     .event-image {
@@ -97,6 +117,17 @@
 
     .end-of-event {
         clear: both;
+    }
+
+    .social-media {
+        /* Use whitespace to visually separate from the info 
+         * the ride leader entered.
+         */
+        margin-top: 20px;
+
+        a {
+          margin-right: 10px;
+        }
     }
 }
 
