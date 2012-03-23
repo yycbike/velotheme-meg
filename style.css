@@ -2817,6 +2817,11 @@ th.weeks {
     padding-bottom: 2px;
     padding-top: 4px;
     padding-right: 11px;
+    /* override CSS properties the theme sets for regular tables */
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: normal;
     /* We have 940px available for the calendar.
      * The closest we can come is 935px
      *

@@ -636,7 +636,7 @@ a:hover {
 #access li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
-	color: #009e8f;
+	color: $emphasis-link-color;
 }
 #access li:hover > a,
 #access a:focus {
@@ -645,7 +645,7 @@ a:hover {
 	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5));
 	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);*/
-	color: #009e8f;
+	color: $emphasis-link-color;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -654,7 +654,7 @@ a:hover {
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-	color: #009e8f;
+	color: $emphasis-link-color;
 }
 
 /* Slider */
@@ -1508,7 +1508,7 @@ section.feature-image.large .entry-title a {
 }
 section.feature-image.large:hover .entry-title a,
 section.feature-image.large .entry-title:hover a {
-	color: #009e8f;
+	color: $emphasis-link-color;
 }
 section.feature-image.large .entry-summary {
 	padding: 0 20px;
