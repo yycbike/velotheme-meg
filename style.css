@@ -3238,12 +3238,14 @@ h2.event-submission-preview {
 .new-event-form {
   width: 650px;
   /* Section labels are bigger than normal */
+  /* A red that's not too bright */
   /* Labels for the individual controls on the left side */
   /* Controls, instructions, etc. that go with a label */
   /* textarea for entering event description */
   /* Actions at the bottom of the form */
   /* help text */
-  /* Indent the radio button */ }
+  /* Indent the radio button */
+  /* Error message field */ }
   .new-event-form h2.event-submission-section {
     margin-top: 10px;
     font-size: 20px; }
@@ -3252,6 +3254,14 @@ h2.event-submission-preview {
     clear: both;
     float: left;
     margin-bottom: 20px; }
+    .new-event-form .event-submission-label.error {
+      /* Wrap the label in a span, so the underline only goes
+       * under the text, not the whole width of the div.
+       */ }
+      .new-event-form .event-submission-label.error span {
+        border-bottom-style: solid;
+        border-bottom-color: #990000;
+        border-bottom-width: 3px; }
   .new-event-form .new-event-controls {
     width: 520px;
     float: right;
@@ -3302,3 +3312,15 @@ h2.event-submission-preview {
   .new-event-form .optional {
     color: gray;
     font-size: 12px; }
+  .new-event-form .error-messages {
+    border-style: solid;
+    border-color: #990000;
+    border-width: 2px;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 10px;
+    /* Tighten up spacing between intro paragraph & list */ }
+    .new-event-form .error-messages p {
+      margin-bottom: 0px; }
+    .new-event-form .error-messages ul {
+      margin-top: 0px; }

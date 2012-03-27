@@ -28,6 +28,9 @@ h2.event-submission-preview {
 
     $margin-below-controls: 20px;
 
+    /* A red that's not too bright */
+    $error-border-color: hsl(0, 100%, 30%);
+
     /* Labels for the individual controls on the left side */
     .event-submission-label {
         width: $label-area-width;
@@ -35,6 +38,17 @@ h2.event-submission-preview {
         float: left;
 
         margin-bottom: $margin-below-controls;
+
+        &.error {
+            /* Wrap the label in a span, so the underline only goes
+             * under the text, not the whole width of the div.
+             */
+            span {
+                border-bottom-style: solid;
+                border-bottom-color: $error-border-color;
+                border-bottom-width: 3px;
+            }
+        }
     }
 
     /* Controls, instructions, etc. that go with a label */
@@ -131,6 +145,25 @@ h2.event-submission-preview {
     .optional {
         color: gray;
         font-size: 12px;
+    }
+
+    /* Error message field */
+    .error-messages {
+        border-style: solid;
+        border-color: $error-border-color;
+        border-width: 2px;
+
+        margin: 0px;
+        padding: 5px;
+        padding-left: 10px;
+
+        /* Tighten up spacing between intro paragraph & list */
+        p {
+            margin-bottom: 0px;
+        }
+        ul {
+            margin-top: 0px;
+        }
     }
 }
 
