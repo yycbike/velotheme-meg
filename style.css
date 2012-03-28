@@ -2901,51 +2901,77 @@ th.weeks {
   display: block;
   height: 300px;
   margin: 0;
-  width: 6349x;
+  width: 646px;
   position: absolute;
   top: 100px;
   left: 341px;
   float: right;
   overflow: hidden;
-  background: #f7f7f7;
-  /* The "Velopalooza is" text */
-  /* The 3 attributes about Velopalooza */ }
-  #front-page-post .image-banner {
-    margin: 0px;
-    padding: 5px;
-    list-style: none; }
-    #front-page-post .image-banner li {
-      display: inline; }
-    #front-page-post .image-banner img {
-      background: none;
-      border: 1px solid #ddd;
+  background: #f7f7f7; }
+  #front-page-post .front-page-post-section {
+    /* The "Velopalooza is" text */
+    /* The 3 attributes about Velopalooza */ }
+    #front-page-post .front-page-post-section.top {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 163px;
+      width: 646px; }
+    #front-page-post .front-page-post-section.bottom {
+      position: absolute;
+      left: 0px;
+      top: 163px;
+      height: 137px;
+      width: 646px; }
+    #front-page-post .front-page-post-section .image-banner {
       margin: 0px;
-      padding: 0px;
-      width: 150px;
-      height: 150px;
-      margin-right: 4px; }
-    #front-page-post .image-banner img.last {
-      padding-right: 0px; }
-  #front-page-post p {
-    font-family: "arvo", sans-serif;
-    font-size: 16px;
-    clear: both;
-    margin-bottom: 8px;
-    text-align: center; }
-  #front-page-post li {
-    font-family: "arvo", sans-serif;
-    font-size: 24px;
-    list-style: none; }
-    #front-page-post li.awesome {
-      margin-left: 35px;
-      display: inline; }
-    #front-page-post li.fun {
-      margin-left: 35px;
-      display: inline; }
-    #front-page-post li.anyone {
+      padding: 5px;
+      list-style: none; }
+      #front-page-post .front-page-post-section .image-banner li {
+        display: inline; }
+      #front-page-post .front-page-post-section .image-banner img {
+        background: none;
+        border: 1px solid #ddd;
+        margin: 0px;
+        padding: 0px;
+        width: 150px;
+        height: 150px;
+        margin-right: 4px; }
+      #front-page-post .front-page-post-section .image-banner img.last {
+        padding-right: 0px; }
+    #front-page-post .front-page-post-section ul.social-media {
+      margin: 0px;
+      padding-left: 5px;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+      #front-page-post .front-page-post-section ul.social-media li {
+        list-style: none; }
+        #front-page-post .front-page-post-section ul.social-media li img {
+          margin: 0px;
+          background: none;
+          position: relative;
+          width: auto; }
+    #front-page-post .front-page-post-section p {
+      font-family: "arvo", sans-serif;
+      font-size: 16px;
+      clear: both;
+      margin-bottom: 8px;
       text-align: center; }
-  #front-page-post a {
-    color: #009e8f; }
+    #front-page-post .front-page-post-section li {
+      font-family: "arvo", sans-serif;
+      font-size: 24px;
+      list-style: none; }
+      #front-page-post .front-page-post-section li.awesome {
+        margin-left: 35px;
+        display: inline; }
+      #front-page-post .front-page-post-section li.fun {
+        margin-left: 35px;
+        display: inline; }
+      #front-page-post .front-page-post-section li.anyone {
+        text-align: center; }
+    #front-page-post .front-page-post-section a {
+      color: #009e8f; }
 
 /* Event listings are similar, but not identical, based on how they're used. 
  * Set up a mixin to handle the differences.

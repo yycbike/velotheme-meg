@@ -224,11 +224,18 @@ th.weeks {
 
 /* Front page post */
 #front-page-post {
+    $front-page-post-width:  646px;
+    $front-page-post-height: 300px;
+    $front-page-post-top-height: 163px;
+    $front-page-post-bottom-height: 
+      $front-page-post-height - $front-page-post-top-height;
+
+
     border: 1px solid #ddd;
     display: block;
-    height: 300px;
+    height: $front-page-post-height;
     margin: 0;
-    width: 6349x;
+    width:  $front-page-post-width;
     position: absolute;
     top: 100px;
     left: 341px;
@@ -237,66 +244,103 @@ th.weeks {
 
     background: hsl(0, 0%, 97%);
 
-    .image-banner {
-        margin: 0px;
-        padding: 5px;
-
-        list-style: none;
-
-        li {
-            display: inline;
+    .front-page-post-section {
+        &.top {
+            position: absolute;
+            left:     0px;
+            top:      0px;
+            height:   $front-page-post-top-height;
+            width:    $front-page-post-width;
         }
 
-        img {
-            background: none;
-            border: 1px solid #ddd;
+        &.bottom {
+            position: absolute;
+            left:     0px;
+            top:      $front-page-post-top-height;
+            height:   $front-page-post-bottom-height;
+            width:    $front-page-post-width;
+        }
+
+        .image-banner {
             margin: 0px;
-            padding: 0px;
+            padding: 5px;
 
-            width: 150px;
-            height: 150px;
+            list-style: none;
 
-            margin-right: 4px;
+            li {
+                display: inline;
+            }
+
+            img {
+                background: none;
+                border: 1px solid #ddd;
+                margin: 0px;
+                padding: 0px;
+
+                width: 150px;
+                height: 150px;
+
+                margin-right: 4px;
+            }
+
+            img.last {
+                padding-right: 0px;
+            }
         }
 
-        img.last {
-            padding-right: 0px;
-        }
-    }
+        ul.social-media {
+            margin: 0px;
+            padding-left: 5px; 
+            position: absolute;
+            top: 0px;
+            left: 0px;
 
-    /* The "Velopalooza is" text */
-    p {
-        font-family: "arvo", sans-serif;
-        font-size: 16px;
-        clear: both;
-        margin-bottom: 8px;
-        text-align: center;
-    }
+            li {
+                list-style: none;
 
-    /* The 3 attributes about Velopalooza */
-    li {
-        font-family: "arvo", sans-serif;
-        font-size: 24px;
-        list-style: none;
-
-        // Hand-set the margins to visually centre the text
-        // 'inline' so the first 2 items show on the same line
-        &.awesome {
-            margin-left: 35px;
-            display: inline;
+                img {
+                    margin: 0px;
+                    background: none;
+                    position: relative;
+                    width: auto;
+                }
+            }
         }
 
-        &.fun {
-            margin-left: 35px;
-            display: inline;
-        }
-
-        &.anyone {
+        /* The "Velopalooza is" text */
+        p {
+            font-family: "arvo", sans-serif;
+            font-size: 16px;
+            clear: both;
+            margin-bottom: 8px;
             text-align: center;
         }
-    }
 
-    a {
-        color: $emphasis-link-color;
+        /* The 3 attributes about Velopalooza */
+        li {
+            font-family: "arvo", sans-serif;
+            font-size: 24px;
+            list-style: none;
+
+            // Hand-set the margins to visually centre the text
+            // 'inline' so the first 2 items show on the same line
+            &.awesome {
+                margin-left: 35px;
+                display: inline;
+            }
+
+            &.fun {
+                margin-left: 35px;
+                display: inline;
+            }
+
+            &.anyone {
+                text-align: center;
+            }
+        }
+
+        a {
+            color: $emphasis-link-color;
+        }
     }
 }
