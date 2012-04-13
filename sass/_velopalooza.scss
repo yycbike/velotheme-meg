@@ -280,7 +280,9 @@ th.weeks {
                 width: 150px;
                 height: 150px;
 
-                margin-right: 4px;
+		// 4px fills up the space better, but on Firefox it
+		// pushes the last element onto the 2nd line.
+                margin-right: 3px;
             }
 
             img.last {
