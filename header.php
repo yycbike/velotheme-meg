@@ -131,10 +131,6 @@
 
 			<?php if(is_front_page())
 				{
-                    // This was the featured post slideshow. Instead, we just put the body of one post on the
-                    // front page.
-                    //print '<div id=billboard class=featured-posts>';
-					// include ('feature-slide.php');
                     print '<div id=front-page-post>';
                     the_post();
                     the_content();
