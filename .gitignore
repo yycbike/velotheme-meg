@@ -1,5 +1,3 @@
-syntax: glob
-
 # Ignore emacs backups
 *~
 \#*\#
@@ -13,6 +11,3 @@ syntax: glob
 
 # Ignore SASS cache
 .sass-cache/
-
-syntax: regexp
-/RCS/
