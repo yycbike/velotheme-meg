@@ -167,8 +167,18 @@ th.weeks {
         margin-top: $date-margin-top + $date-margin-bottom +
             $date-border-bottom + $date-font-size +
             2px;
-
+				
+				padding: 20px 20px 0 20px; 
+				overflow: hidden;
+				border-right: 10px solid white;
         background-color: hsl(0, 0%, 93%);
+
+				h2 {
+					font-weight: bold;
+					margin-bottom: 10px;
+					font-size: 20px;
+				}
+
     }
 }
 
@@ -224,8 +234,8 @@ th.weeks {
 
 /* Front page post */
 #front-page-post {
-    $front-page-post-width:  646px;
-    $front-page-post-height: 300px;
+    $front-page-post-width:  626px;
+    $front-page-post-height: 305px;
     $front-page-post-top-height: 163px;
     $front-page-post-bottom-height: 
       $front-page-post-height - $front-page-post-top-height;
@@ -241,8 +251,17 @@ th.weeks {
     left: 341px;
     float: right;
     overflow: hidden;
+		padding: 10px;
 
     background: hsl(0, 0%, 97%);
+
+		p {
+		  margin-bottom: 15px;
+		}
+		
+		.fb-like, .twitter-follow-button {
+			float: left;
+		}
 
     .front-page-post-section {
         &.top {
@@ -345,4 +364,14 @@ th.weeks {
             color: $emphasis-link-color;
         }
     }
+}
+
+/* Colin's Overides for Now */
+
+#site-title, #site-description {
+	display: none;
+}
+
+#content .type-bfc-event .entry-content {
+	padding-top: 0;
 }

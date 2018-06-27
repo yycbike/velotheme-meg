@@ -74,7 +74,7 @@ body {
   margin: 0 7.6%; }
 
 #access div {
-  margin: 0 7.6%; }
+  margin: 0 5px; }
 
 #primary {
   float: left;
@@ -477,7 +477,7 @@ input#searchsubmit {
 
 /* Links */
 a {
-  color: #28776f;
+  color: #3c93b3;
   text-decoration: none; }
 
 a:focus,
@@ -537,7 +537,7 @@ a:hover {
   font-size: 14px;
   margin: 0 270px 3.65625em 0; }
 
-#branding img {
+#branding #poster {
   background: #444;
   /*-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
@@ -583,16 +583,7 @@ a:hover {
   content: " "; }
 
 #access {
-  background: #555;
-  /* Show a solid color for older browsers */
-  background: -moz-linear-gradient(#444444, #333333);
-  background: -o-linear-gradient(#444444, #333333);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444444), to(#333333));
-  /* older webkit syntax */
-  background: -webkit-linear-gradient(#444444, #333333);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+  background: #333;
   clear: none;
   display: inline;
   margin: 20px -20px 6px 0px;
@@ -628,20 +619,23 @@ a:hover {
 #access ul {
   font-size: 15px;
   list-style: none;
-  padding-left: 0;
+  padding-left: 5px;
   margin: 0; }
 
 #access li {
   float: left;
   position: relative;
-  padding: 0 3px; }
+  padding: 0 5px 0 0; }
+/* Tweaked to get Contacts to reappear on main menu - RKF - June 2013
+padding: 0 3px; } 
+*/
 
 #access a {
   color: #eee;
   font-weight: 500;
   display: block;
   line-height: 3.333em;
-  padding: 0 1.2125em;
+  padding: 0 0.4em;
   text-decoration: none; }
 
 #access ul ul {
@@ -675,7 +669,7 @@ a:hover {
 #access li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
-  color: #009e8f; }
+  color: #00aeef; }
 
 #access li:hover > a,
 #access a:focus {
@@ -684,7 +678,7 @@ a:hover {
   background: -o-linear-gradient(#f9f9f9, #e5e5e5);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5));
   background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);*/
-  color: #009e8f; }
+  color: #00aeef; }
 
 #access ul li:hover > ul {
   display: block; }
@@ -693,7 +687,7 @@ a:hover {
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
-  color: #009e8f; }
+  color: #00aeef; }
 
 /* Slider */
 .slider {
@@ -1517,7 +1511,7 @@ section.feature-image.large .entry-title a {
 
 section.feature-image.large:hover .entry-title a,
 section.feature-image.large .entry-title:hover a {
-  color: #009e8f; }
+  color: #00aeef; }
 
 section.feature-image.large .entry-summary {
   padding: 0 20px; }
@@ -2759,7 +2753,8 @@ div#second {
 #calendar-header {
   position: relative;
   width: 100%;
-  border-top: 1px dotted rgba(0, 0, 0, 0.3); }
+  border-top: 1px dotted rgba(0, 0, 0, 0.3);
+}
 
 #calendar-header h1 {
   color: #222;
@@ -2786,16 +2781,20 @@ div#second {
 
 #calendar-header .calendar-switch {
   float: right;
-  width: 384px;
+  width: 260px;
   height: 80px;
-  background: url(images/calendar-switch.png) no-repeat;
+  background: url(images/calendar-switch-2.png) no-repeat;
+  border-left: 1px dotted rgba(0, 0, 0, 0.3);
   padding: 20px;
-  margin-top: 9px;
-  margin-bottom: 10px; }
-
-#calendar-header .calendar-switch a {
-  color: #009e8f;
-  font-weight: strong; }
+  padding-left: 145px;
+  margin: 9px 0 10px 10px; }
+  #calendar-header .calendar-switch p {
+    margin-bottom: 0;
+    margin-top: 15px; }
+  #calendar-header .calendar-switch a {
+    color: #009e8f;
+    font-weight: strong;
+    font-size: 16px; }
 
 /* @@@ It's unclear what this refers to */
 th.weeks {
@@ -2846,14 +2845,21 @@ th.weeks {
     border-bottom-style: solid;
     font-size: 14px; }
   .overview-calendar .overview-calendar-padding {
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     margin-right: 3px;
     /* Align the box with the bottom of the date divs.
      * Need a mystery 2px of padding.
      */
     margin-top: 30px;
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+    border-right: 10px solid white;
     background-color: #ededed; }
+    .overview-calendar .overview-calendar-padding h2 {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 20px; }
 
 /* Event listings in overview calendar, sidebar, etc */
 .event-title {
@@ -2899,15 +2905,20 @@ th.weeks {
 #front-page-post {
   border: 1px solid #ddd;
   display: block;
-  height: 300px;
+  height: 282px;
   margin: 0;
-  width: 646px;
+  width: 626px;
   position: absolute;
   top: 100px;
   left: 341px;
   float: right;
   overflow: hidden;
+  padding: 10px;
   background: #f7f7f7; }
+  #front-page-post p {
+    margin-bottom: 15px; }
+  #front-page-post .fb-like, #front-page-post .twitter-follow-button {
+    float: left; }
   #front-page-post .front-page-post-section {
     /* The "Velopalooza is" text */
     /* The 3 attributes about Velopalooza */ }
@@ -2916,13 +2927,13 @@ th.weeks {
       left: 0px;
       top: 0px;
       height: 163px;
-      width: 646px; }
+      width: 626px; }
     #front-page-post .front-page-post-section.bottom {
       position: absolute;
       left: 0px;
       top: 163px;
-      height: 137px;
-      width: 646px; }
+      height: 142px;
+      width: 626px; }
     #front-page-post .front-page-post-section .image-banner {
       margin: 0px;
       padding: 5px;
@@ -2971,7 +2982,14 @@ th.weeks {
       #front-page-post .front-page-post-section li.anyone {
         text-align: center; }
     #front-page-post .front-page-post-section a {
-      color: #009e8f; }
+      color: #00aeef; }
+
+/* Colin's Overides for Now */
+#site-title, #site-description {
+  display: none; }
+
+#content .type-bfc-event .entry-content {
+  padding-top: 0; }
 
 /* Event listings are similar, but not identical, based on how they're used. 
  * Set up a mixin to handle the differences.
@@ -3161,7 +3179,7 @@ th.weeks {
   font-size: 14px; }
 
 .event-info a {
-  color: #009e8f; }
+  color: #00aeef; }
 
 .event-info .admin-edit-link {
   font: 12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -3350,3 +3368,71 @@ h2.event-submission-preview {
       margin-bottom: 0px; }
     .new-event-form .error-messages ul {
       margin-top: 0px; }
+
+
+.calendar-legend {
+	padding-top: 15px;
+	float: right;
+	color: #888;
+	}
+	
+/* sponsorship on homepage */
+
+#calendar-sponsors {
+	margin: 10px 0 10px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#calendar-sponsors th {
+	font-size: 10px;
+	color: #999;
+	text-align: right;
+}
+
+#calendar-sponsors td {
+	vertical-align: middle;
+	background: white;
+	padding: 10px 5px 0 5px;
+}
+
+#calendar-sponsors td .premier-sponsor {
+	font-size: 10px;
+	color:#999;
+	display: block;
+	line-height: 0;
+}
+	
+/* sponsorship page logos etc. */
+
+#sponsor-table td {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	vertical-align: middle !important;
+}
+
+#sponsor-table .last-row td {
+	border-bottom: 1px solid #ddd;
+}
+
+#sponsor-table th {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 30px 0 30px 0;
+}
+
+#sponsor-table #carbon-head {
+	padding-top: 0;
+}
+
+#sponsor-table #carbon-head span {
+	background: #ffcc66;
+}
+
+#sponsor-table th span {
+	display: block;
+	background: #eee;
+	padding: 10px;
+}
+
+

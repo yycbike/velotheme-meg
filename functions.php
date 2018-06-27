@@ -22,8 +22,8 @@ function velo_new_default_header_images() {
     $theme_dir = get_bloginfo('stylesheet_directory');
     register_default_headers( array (
         'velo2011' => array (
-            'url' => "$theme_dir/images/headers/velo2011.jpg",
-            'thumbnail_url' => "$theme_dir/images/headers/velo2011-thumbnail.jpg", // 150 x 219px
+            'url' => "$theme_dir/images/headers/cyclepalooza-2012.png",
+            'thumbnail_url' => "$theme_dir/images/headers/cyclepalooza-2012-thumbnail.png", // 150 x 219px
             'description' => __( 'Velopalooza 2011 Poster', 'velotheme-meg' )
         )
     ));

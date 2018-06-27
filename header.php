@@ -57,10 +57,6 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<!--Install typekit-->
-<script type="text/javascript" src="http://use.typekit.com/yws0joy.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -78,6 +74,25 @@
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB5923"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PB5923');</script>
+<!-- End Google Tag Manager -->
+
+	<!-- facebook goo -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
@@ -104,9 +119,9 @@
 						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 					else: */ ?>
 					<?php if(is_front_page()): ?>
-						<img class="raised-dropshadow" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+						<img class="raised-dropshadow" id="poster" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 					<?php else: ?>
-						<img class="raised-dropshadow" src="/wp-content/uploads/2012/03/2012-header-stripe.png" width="<?php echo HEADER_IMAGE_WIDTH; ?>" alt="" />
+						<img class="raised-dropshadow" id="poster" src="<?php bloginfo('stylesheet_directory'); ?>/images/headers/cyclepalooza-2012-small.png" width="306px" alt="" />
 					<?php endif; ?>
 				<?php /*endif*/; // end check for featured image or standard header ?>
 			</a>
