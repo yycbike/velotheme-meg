@@ -1,10 +1,8 @@
 # Background Info
-This is a theme designed to work with the bikefuncal plugin. Some things you should know, in order to get it to work:
+This is a theme designed by Velopalooza to work with the bikefuncal plugin. Some things you should know, in order to get it to work:
 
 * It's a child theme of the twentyeleven theme, so you must have twentyeleven installed for this to work. (twentyeleven is installed by default with WordPress)
 * You must have the bikefuncal plugin installed.
-* We (Velopalooza) use the [[http://wordpress.org/extend/plugins/adrotate/|AdRotate plugin]] to show a list of sponsors. You have two choices for dealing with this: (1) go into front-page.php and delete the part about AdRotate, or (2) install the plugin, and create at least two ad blocks. To create the blocks, go to the WP dashboard, then AdRotate -> Manage Blocks -> Add New.
-* You'll almost certainly need to edit the theme's PHP and SCSS (style) files, at least a little. We recommend that you use Mercurial and BitBucket to track your changes. This will make it much easier to share improvements & changes between cities.
 
 # Using SASS
 The stylesheets for the theme are written in [[http://sass-lang.com|SASS]]; SASS is like CSS, but much more manageable to write. The file style.css is generated from the files in the scss directory. (Some of the layouts we made would have been tremendously cumbersome to write in plain CSS.)
