@@ -219,7 +219,7 @@ class Velo_Widget_Meta extends WP_Widget {
 
 		// Get menus
 		$menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
-		
+
 		// If no menus exists, direct the user to go and create some.
 		if ( !$menus ) {
 			echo '<p>'. sprintf( __('No menus have been created yet. <a href="%s">Create some</a>.'), admin_url('nav-menus.php') ) .'</p>';
@@ -243,62 +243,4 @@ class Velo_Widget_Meta extends WP_Widget {
 }
 
 register_widget('Velo_Widget_Meta');
-
-/**
- * Velopalooza Stay Connected widget class
- *
- * Displays email newsletter sign up form and links to Facebook and Twitter
- *
- */
-class Velo_Widget_StayConnected extends WP_Widget {
-
-	function Velo_Widget_StayConnected() {
-		$widget_ops = array('classname' => 'velo_widget_stayconnected', 'description' => __( "Displays email newsletter sign up form and links to Facebook and Twitter") );
-		parent::WP_Widget(false, 'Velopalooza Stay Connected Widget');
-	}
-
-	function widget( $args, $instance ) {
-		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Velopalooza Stay Connected Footer') : $instance['title'], $instance, $this->id_base);
-
-		echo $before_widget;
-		if ( $title )
-			echo $before_title . $title . $after_title;
-?>
-			<ul>
-            <li>Sign up for the email newsletter:</li>
-            <li>
-            	<form id="newsletter" name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post">
-        			<input type="hidden" name="llr" value="xltcqeeab">
-        			<input type="hidden" name="m" value="1103957675383">
-        			<input type="hidden" name="p" value="oi">
-        			<input type="text" name="ea" id="newsletter-email" value="" placeholder="you@yours.com" >
-        			<input type="submit" name="go" value="Subscribe" class="submit">
-        		</form>
-            </li>
-            <li> Or join us on <a href="http://www.facebook.com/velopalooza">Facebook</a>
-            </ul>
-<?php
-
-		echo $after_widget;
-	}
-
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
-		return $instance;
-	}
-
-	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
-		$title = strip_tags($instance['title']);
-?>
-			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
-<?php
-	}
-}
-
-/* Register the stay connected widget */
-register_widget('Velo_Widget_StayConnected');
-
 ?>
