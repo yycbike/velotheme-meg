@@ -12,7 +12,7 @@ body {
 	margin: 0 7.6%;
 }
 #access div {
-	margin: 0 7.6%;
+	margin: 0 5px;
 }
 #primary {
 	float: left;
@@ -493,7 +493,7 @@ a:hover {
 	margin: 0 270px 3.65625em 0;
 }
 
-#branding img {
+#branding #poster {
 	background:#444;
 	/*-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 4px;
@@ -542,14 +542,7 @@ a:hover {
 }
 
 #access {
-	background: #555; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#444, #333);
-	background: -o-linear-gradient(#444, #333);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444), to(#333)); /* older webkit syntax */
-	background: -webkit-linear-gradient(#444, #333);
-	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	background: #333;
 	clear: none;
 	display: inline;
 	margin: 20px -20px 6px 0px;
@@ -588,21 +581,21 @@ a:hover {
 #access ul {
 	font-size: 15px;
 	list-style: none;
-	padding-left: 0;
+	padding-left: 5px;
 	margin: 0;
 }
 
 #access li {
 	float: left;
 	position: relative;
-	padding: 0 3px;
+	padding: 0 5px 0 0;
 }
 #access a {
 	color: #eee;
 	font-weight: 500;
 	display: block;
 	line-height: 3.333em;
-	padding: 0 1em;
+	padding: 0 0.4em;
 	text-decoration: none;
 }
 #access ul ul {
@@ -948,7 +941,7 @@ p img,
 }
 .wp-caption .wp-caption-text:before {
 	color: #666;
-	content: '\2014';
+	content: '\2015';
 	font-size: 14px;
 	font-style: normal;
 	font-weight: bold;
@@ -2153,7 +2146,7 @@ a.comment-reply-link > span {
 	border-radius: 3px;
 	padding: 1.625em;
 	position: relative;
-	width: auto%;
+	width: auto;
 }
 #respond input[type="text"],
 #respond textarea {

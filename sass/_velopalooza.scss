@@ -73,17 +73,24 @@
 
 #calendar-header .calendar-switch {
 	float: right;	
-	width: 384px;
+	width: 260px;
 	height: 80px;
-	background: url(images/calendar-switch.png) no-repeat;
+	background: url(images/calendar-switch-2.png) no-repeat;
+	border-left: 1px dotted rgba(0, 0, 0, 0.3);
 	padding: 20px;
-	margin-top: 9px;
-	margin-bottom: 10px;
+	padding-left: 145px;
+	margin: 9px 0 10px 10px;
+}
+
+#calendar-header .calendar-switch p {
+	margin-bottom: 0;
+	margin-top: 15px;
 }
 
 #calendar-header .calendar-switch a {
-	color: $emphasis-link-color;
+	color:  #009e8f;
 	font-weight: strong;
+	font-size: 16px;
 }
 
 /* @@@ It's unclear what this refers to */
@@ -156,7 +163,7 @@ th.weeks {
 
     /* Padding text in the calendar */
     .overview-calendar-padding {
-        font-size: 18px;
+        font-size: 16px;
 
         padding: 5px;
         margin-right: $th-gap;
@@ -235,10 +242,9 @@ th.weeks {
 /* Front page post */
 #front-page-post {
     $front-page-post-width:  626px;
-    $front-page-post-height: 305px;
+    $front-page-post-height: 282px;
     $front-page-post-top-height: 163px;
-    $front-page-post-bottom-height: 
-      $front-page-post-height - $front-page-post-top-height;
+    $front-page-post-bottom-height: 119px;
 
 
     border: 1px solid #ddd;

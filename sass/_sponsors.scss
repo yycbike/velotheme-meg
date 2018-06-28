@@ -1,0 +1,64 @@
+.calendar-legend {
+   padding-top: 15px;
+   float: right;
+   color: #888;
+   }
+
+/* sponsorship on homepage */
+
+#calendar-sponsors {
+   margin: 10px 0 10px 0;
+   padding: 0;
+   width: 100%;
+}
+
+#calendar-sponsors th {
+   font-size: 10px;
+   color: #999;
+   text-align: right;
+}
+
+#calendar-sponsors td {
+   vertical-align: middle;
+   background: white;
+   padding: 10px 5px 0 5px;
+}
+
+#calendar-sponsors td .premier-sponsor {
+   font-size: 10px;
+   color:#999;
+   display: block;
+   line-height: 0;
+}
+
+/* sponsorship page logos etc. */
+
+#sponsor-table td {
+   padding-top: 20px;
+   padding-bottom: 10px;
+   vertical-align: middle !important;
+}
+
+#sponsor-table .last-row td {
+   border-bottom: 1px solid #ddd;
+}
+
+#sponsor-table th {
+   font-size: 16px;
+   font-weight: bold;
+   padding: 30px 0 30px 0;
+}
+
+#sponsor-table #carbon-head {
+   padding-top: 0;
+}
+
+#sponsor-table #carbon-head span {
+   background: #ffcc66;
+}
+
+#sponsor-table th span {
+   display: block;
+   background: #eee;
+   padding: 10px;
+}
