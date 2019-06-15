@@ -76,8 +76,6 @@ function twentyeleven_admin_header_style() {
 <?php
 }
 
-//add_action('admin_head', 'velo_admin_header_image');
-
 /**
  * Register more sidebars widgetized areas.
  */
@@ -192,14 +190,11 @@ class Velo_Widget_Meta extends WP_Widget {
 		$nav_menu = ! empty( $instance['nav_menu'] ) ? wp_get_nav_menu_object( $instance['nav_menu'] ) : false;
 
 		echo $before_widget;
-		//if ( $title )
-			//echo $before_title . $title . $after_title;
 ?>
 			<ul>
 			<?php if ( $nav_menu ) wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $nav_menu, 'items_wrap' => '%3$s', 'container' => false ) ); ?>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
-			<?php //wp_meta(); ?>
 			</ul>
 <?php
 		echo $after_widget;
