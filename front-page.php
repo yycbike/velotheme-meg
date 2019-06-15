@@ -67,7 +67,7 @@ get_header(); ?>
 						?>
 					</div><!-- #main-calendar -->
 					<p><img src="https://cyclepalooza.ca/wp-content/themes/velotheme-meg/images/footer-image.jpg" width="960" height="236" alt="Cyclepalooza Footer Image"/></p>
-<? } ?>
+<?php } ?>
 				</div><!-- #calendar-header -->
 			</div><!-- #content -->
 		</div><!-- #primary -->
